@@ -12,6 +12,15 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        heroBackground: "url(/hero-cover@2x.png)",
+      },
+      fontFamily: {
+        rubik: ["rubik", "sans-serif"],
+      },
+      backdropBlur: {
+        searchBlur: "9.048371315002441px",
+      },
     },
   },
   plugins: [],
