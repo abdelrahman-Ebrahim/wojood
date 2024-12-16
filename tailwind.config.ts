@@ -21,6 +21,9 @@ const config: Config = {
       backdropBlur: {
         searchBlur: "9.048371315002441px",
       },
+      boxShadow: {
+        chosenBox: "0px -5px 16.1px 0px #00000040",
+      },
     },
   },
   plugins: [],
