@@ -3,7 +3,7 @@ import ImageCard from "../ImageCard/ImageCard";
 
 const Chosen = () => {
   return (
-    <section className="mt-[90px] flex flex-col text-center font-rubik mx-[143px] mb-96">
+    <section className="mt-[90px] flex flex-col text-center font-rubik mx-[143px] mb-8">
       <h2 className="text-[#390089] font-semibold text-[34px]">أقسام مُختارة</h2>
       <p className="mt-2 text-[#140623] font-normal text-xl">
         استكشِف مجموعة مُختارة من الأعمال الفنيّة المُميّزة بعناية لتُناسب ذوقك
