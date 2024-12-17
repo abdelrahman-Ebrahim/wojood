@@ -2,9 +2,9 @@ import React from "react";
 
 const JoinUs = () => {
   return (
-    <section className="mt-16 mx-[112px] min-h-[350px] rounded-xl bg-center bg-cover bg-joinBg font-rubik relative mb-96">
+    <section className="mt-16 mx-[112px] min-h-[350px] rounded-xl bg-center bg-cover bg-joinBg font-rubik relative">
       {/* Overlay */}
-      <div className="absolute inset-0 rounded-xl bg-[rgba(0,0,0,0.3)] z-0"></div>
+      <div className="absolute inset-0 rounded-xl bg-[rgba(0,0,0,0.5)] z-0"></div>
 
       {/* Content Wrapper */}
       <div className="relative z-10 pt-9 pr-[66px] flex flex-col gap-4 text-white">
