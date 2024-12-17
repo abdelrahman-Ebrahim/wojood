@@ -3,7 +3,7 @@ import React from "react";
 
 const ColorsSection = () => {
   return (
-    <section className="mt-16 text-center font-rubik mb-96">
+    <section className="mt-16 text-center font-rubik">
       <div className="flex justify-between items-center">
         {/* Text Section */}
         <div className="flex flex-col min-w-[364px] mr-[127px]">

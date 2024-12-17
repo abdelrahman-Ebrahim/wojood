@@ -14,6 +14,7 @@ const config: Config = {
       },
       backgroundImage: {
         heroBackground: "url(/hero-cover@2x.png)",
+        galleryBackground: "url(/galleryBg.png)",
       },
       fontFamily: {
         rubik: ["rubik", "sans-serif"],
@@ -23,6 +24,13 @@ const config: Config = {
       },
       boxShadow: {
         chosenBox: "0px -5px 16.1px 0px #00000040",
+        galleryCombinedShadows: `
+          -2px 2px 5px 0px #0000002B,
+          -7px 7px 10px 0px #00000026,
+          -17px 15px 13px 0px #00000017,
+          -30px 27px 16px 0px #00000008,
+          -46px 42px 17px 0px #00000000
+        `,
       },
     },
   },
