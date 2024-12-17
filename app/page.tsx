@@ -1,4 +1,5 @@
 import ArtSection from "./components/ArtSection/ArtSection";
+import CanvasSection from "./components/CanvasSection/CanvasSection";
 import Chosen from "./components/Chosen/Chosen";
 import ColorsSection from "./components/ColorsSection/ColorsSection";
 import Gallery from "./components/Gallery/Gallery";
@@ -11,7 +12,8 @@ export default function Home() {
       <Chosen />
       <ColorsSection />
       <Gallery />
-      <ArtSection/>
+      <ArtSection />
+      <CanvasSection />
     </div>
   );
 }

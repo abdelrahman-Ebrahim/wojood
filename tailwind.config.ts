@@ -15,6 +15,8 @@ const config: Config = {
       backgroundImage: {
         heroBackground: "url(/hero-cover@2x.png)",
         galleryBackground: "url(/galleryBg.png)",
+        canvasBackground: "url(/canvasBg.png)",
+        canvas3 : "url(/canvas3.png)",
       },
       fontFamily: {
         rubik: ["rubik", "sans-serif"],
