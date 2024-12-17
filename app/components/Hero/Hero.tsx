@@ -5,7 +5,7 @@ import { IoIosArrowUp } from "react-icons/io";
 
 const Hero = () => {
   return (
-    <div className="bg-heroBackground bg-center bg-cover relative w-full pb-24">
+    <div className="bg-heroBackground bg-center bg-cover relative w-full pb-24 hero">
       <div className="flex flex-col font-rubik mx-[120px] pt-16">
         {/* Headings */}
         <p className="text-white font-extrabold text-[36px] max-w-[487px]">

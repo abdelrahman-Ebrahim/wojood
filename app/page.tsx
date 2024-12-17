@@ -5,6 +5,7 @@ import ColorsSection from "./components/ColorsSection/ColorsSection";
 import FramesSection from "./components/FramesSection/FramesSection";
 import Gallery from "./components/Gallery/Gallery";
 import Hero from "./components/Hero/Hero";
+import JoinUs from "./components/JoinUs/JoinUs";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <ArtSection />
       <CanvasSection />
       <FramesSection />
+      <JoinUs />
     </div>
   );
 }
