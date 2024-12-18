@@ -4,7 +4,7 @@ import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 
 const Library = () => {
   return (
-    <section className="mt-16 text-center flex flex-col justify-center items-center gap-12 font-rubik mb-96">
+    <section className="mt-16 text-center flex flex-col justify-center items-center gap-12 font-rubik">
       {/* Header */}
       <div className="flex flex-col justify-center items-center gap-4 mt-6">
         <h2 className="font-semibold text-[38px]">مكتبة صور تنمو باستمرار</h2>

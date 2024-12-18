@@ -7,6 +7,7 @@ import Gallery from "./components/Gallery/Gallery";
 import Hero from "./components/Hero/Hero";
 import JoinUs from "./components/JoinUs/JoinUs";
 import Library from "./components/Library/Library";
+import Services from "./components/Services/Services";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <FramesSection />
       <JoinUs />
       <Library />
+      <Services />
     </div>
   );
 }
