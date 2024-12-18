@@ -34,6 +34,13 @@ const config: Config = {
           -30px 27px 16px 0px #00000008,
           -46px 42px 17px 0px #00000000
         `,
+        artCombinedShadows: `
+        -6px 4px 16px 0px #00000059,
+        -25px 16px 30px 0px #0000004D,
+        -57px 36px 40px 0px #0000002E,
+        -101px 64px 48px 0px #0000000D,
+        -157px 100px 52px 0px #00000003
+      `,
       },
     },
   },

@@ -14,7 +14,7 @@ const ArtSection = () => {
               alt="art1"
               width={473}
               height={330}
-              className="-rotate-6"
+              className="-rotate-6 shadow-artCombinedShadows"
             />
             <div className="absolute bg-[#FF4800] w-[651px] h-[100px] top-[15%] left-[50px] -z-10 overflow-hidden skew-x-0 -skew-y-2" />
             <div className="absolute bg-[#FF4800] w-[651px] h-[100px] top-[60%] left-[50px] -z-10 overflow-hidden skew-x-0 skew-y-2" />
