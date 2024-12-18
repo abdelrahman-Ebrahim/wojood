@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar/Navbar";
 
 export default function RootLayoutClient({
@@ -8,13 +8,25 @@ export default function RootLayoutClient({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Initialize with Arabic (ar) as the default language.
   const [lang, setLang] = useState<"ar" | "en">("ar");
 
+  // Toggle the language between Arabic and English.
   const toggleLanguage = () => {
-    setLang((prev) => (prev === "ar" ? "en" : "ar"));
-    document.documentElement.lang = lang === "ar" ? "en" : "ar";
-    document.documentElement.dir = lang === "ar" ? "ltr" : "rtl";
+    // Set the new language and update the document's lang and dir properties.
+    setLang((prev) => {
+      const newLang = prev === "ar" ? "en" : "ar";
+      document.documentElement.lang = newLang;
+      document.documentElement.dir = newLang === "ar" ? "rtl" : "ltr";
+      return newLang;
+    });
   };
+
+  // Ensure the correct direction and language is applied when the component mounts.
+  useEffect(() => {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+  }, [lang]);
 
   return (
     <>
