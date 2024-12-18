@@ -37,14 +37,14 @@ const Footer = () => {
               </div>
             </div>
             <div className="col-span-2 flex justify-center items-start gap-10">
-              <div className="flex flex-col gap-[7px] justify-center items-center w-[293px]">
+              <div className="flex flex-col gap-[7px] justify-center items-start w-[293px]">
                 <h6 className="font-semibold text-[15px]">روابط مهمة</h6>
                 <p className="font-normal text-[15px] text-[#253D4E] cursor-pointer">من نحن</p>
                 <p className="font-normal text-[15px] text-[#253D4E] cursor-pointer">
                   انشر فنك
                 </p>
               </div>
-              <div className="flex flex-col gap-[7px] justify-center items-center w-[293px]">
+              <div className="flex flex-col gap-[7px] justify-center items-start w-[293px]">
                 <h6 className="font-semibold text-[15px]">المساعدة</h6>
                 <p className="font-normal text-[15px] text-[#253D4E] cursor-pointer">
                   الاسئلة المتكررة
@@ -53,7 +53,7 @@ const Footer = () => {
                   تواصل معنا
                 </p>
               </div>
-              <div className="flex flex-col gap-[7px] justify-center items-center w-[293px]">
+              <div className="flex flex-col gap-[7px] justify-center items-start w-[293px]">
                 <h6 className="font-semibold text-[15px]">قانوني</h6>
                 <p className="font-normal text-[15px] text-[#253D4E] cursor-pointer">
                   سياسة الخصوصية
