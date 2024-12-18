@@ -1,3 +1,4 @@
+import Artists from "./components/Artists/Artists";
 import ArtSection from "./components/ArtSection/ArtSection";
 import CanvasSection from "./components/CanvasSection/CanvasSection";
 import Chosen from "./components/Chosen/Chosen";
@@ -22,6 +23,7 @@ export default function Home() {
       <JoinUs />
       <Library />
       <Services />
+      <Artists />
     </div>
   );
 }
