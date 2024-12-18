@@ -1,23 +1,53 @@
+"use client"
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 import { CiSearch } from "react-icons/ci";
 import { IoIosArrowUp } from "react-icons/io";
 
 const Hero = () => {
+  // Animation Variants
+  const fadeUpVariant = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
+  const staggerContainer = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.2 } },
+  };
+
   return (
-    <div className="bg-heroBackground bg-center bg-cover relative w-full pb-24 hero">
-      <div className="flex flex-col font-rubik mx-[120px] pt-16">
+    <motion.div
+      className="bg-heroBackground bg-center bg-cover relative w-full pb-24 hero"
+      initial="hidden"
+      whileInView="visible"
+      variants={staggerContainer}
+    >
+      <motion.div
+        className="flex flex-col font-rubik mx-[120px] pt-16"
+        variants={staggerContainer}
+      >
         {/* Headings */}
-        <p className="text-white font-extrabold text-[36px] max-w-[487px]">
+        <motion.p
+          className="text-white font-extrabold text-[36px] max-w-[487px]"
+          variants={fadeUpVariant}
+        >
           إستمتع بتجربة غنية تثري حواسك
           <br /> وتلهم إبداعك...
-        </p>
-        <p className="text-[#BAA3D9] font-normal mt-2">
+        </motion.p>
+        <motion.p
+          className="text-[#BAA3D9] font-normal mt-2"
+          variants={fadeUpVariant}
+        >
           امتلك فنك. شارك قصتك. بِع حول العالم
-        </p>
+        </motion.p>
 
         {/* Search Section */}
-        <div className="relative max-w-[601px] w-full mt-[32px]">
+        <motion.div
+          className="relative max-w-[601px] w-full mt-[32px]"
+          variants={fadeUpVariant}
+        >
           {/* Input Field */}
           <input
             type="text"
@@ -25,7 +55,11 @@ const Hero = () => {
           />
           {/* Centered Box and Search */}
           <div className="absolute inset-y-0 left-0 flex items-center justify-between w-full px-2">
-            <div className="bg-[#390089] flex items-center gap-2 rounded-[20px] text-white font-rubik px-[14px] py-[8px]">
+            <motion.div
+              className="bg-[#390089] flex items-center gap-2 rounded-[20px] text-white font-rubik px-[14px] py-[8px]"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
               <Image
                 src={"/canvas.png"}
                 alt="canvas"
@@ -35,29 +69,38 @@ const Hero = () => {
               />
               <p>كانفاس</p>
               <IoIosArrowUp size={16} />
-            </div>
-            <div className="size-[25px] bg-[#140623] flex justify-center items-center rounded-full cursor-pointer">
+            </motion.div>
+            <motion.div
+              className="size-[25px] bg-[#140623] flex justify-center items-center rounded-full cursor-pointer"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
               <CiSearch size={15} className="text-white" />
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Popular Search Section */}
-        <div className="flex items-center gap-4 mt-6 text-white">
+        <motion.div
+          className="flex items-center gap-4 mt-6 text-white"
+          variants={staggerContainer}
+        >
           <p>الأكثر بحثا :</p>
           <div className="flex gap-3">
             {["طبيعة", "مناسبات", "اليوم الوطني"].map((item, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="bg-[#FFFFFF38] px-4 py-[6px] rounded-[40px] backdrop-blur-custom"
+                variants={fadeUpVariant}
+                whileHover={{ scale: 1.1 }}
               >
                 <p>{item}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 

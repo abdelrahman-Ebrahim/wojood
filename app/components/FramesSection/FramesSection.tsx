@@ -1,12 +1,29 @@
+"use client";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 const FramesSection = () => {
   return (
     <section className="mt-16 text-center font-rubik">
       <div className="flex justify-center items-center gap-[80px]">
         {/* Text Section */}
-        <div className="flex flex-col min-w-[364px]">
+        <motion.div
+          className="flex flex-col min-w-[364px]"
+          initial={{ opacity: 0, x: -50, rotate: -10 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            rotate: 0,
+          }}
+          viewport={{ once: false, amount: 0.5 }} // Trigger when 50% is in the viewport
+          transition={{
+            duration: 1.5,
+            type: "spring",
+            stiffness: 100,
+            damping: 25,
+          }}
+        >
           {/* Text Block 1 */}
           <div className="text-start">
             <h2 className="text-[40px] font-semibold relative inline-block leading-3">
@@ -28,14 +45,37 @@ const FramesSection = () => {
           </div>
 
           {/* Paragraph */}
-          <p className="font-normal text-xl leading-[29px] text-start mt-4 max-w-[300px]">
+          <motion.p
+            className="font-normal text-xl leading-[29px] text-start mt-4 max-w-[300px]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.5 }} // Trigger when 50% is in the viewport
+            transition={{
+              duration: 1.2,
+              ease: "easeOut",
+            }}
+          >
             اكتشف القطع التي تروي حكايتك <br />
             وتضفي على منزلك لمسة فنية تعبر <br /> عنك.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {/* Image Section */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.85, rotate: 15 }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+            rotate: 0,
+          }}
+          viewport={{ once: false, amount: 0.5 }} // Trigger when 50% is in the viewport
+          transition={{
+            duration: 1.5,
+            type: "spring",
+            stiffness: 120,
+            damping: 30,
+          }}
+        >
           <Image
             src="/mockup.png"
             alt="mockup"
@@ -43,7 +83,7 @@ const FramesSection = () => {
             height={480}
             className="w-full"
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

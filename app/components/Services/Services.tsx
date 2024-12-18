@@ -1,4 +1,6 @@
+"use client"
 import Image from "next/image";
+import { motion } from "framer-motion";
 import React from "react";
 
 const serviceItems = [
@@ -33,10 +35,17 @@ const Services = () => {
     <section className="mt-16 text-center font-rubik">
       <div className="my-4 mx-[86px]">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[115px] px-[65px]">
-          {serviceItems.map((service) => (
-            <div
+          {serviceItems.map((service, index) => (
+            <motion.div
               key={service.id}
               className="rounded-[10px] border border-black"
+              initial={{ opacity: 0, y: 50 }} // Initial state: hidden and slightly below
+              whileInView={{ opacity: 1, y: 0 }} // Final state: fully visible and in place
+              transition={{
+                duration: 0.8,
+                delay: index * 0.3, // Staggered animation delay for each item
+                ease: "easeOut",
+              }}
             >
               <div className="p-[26px] flex flex-col justify-center items-center gap-4">
                 <div>
@@ -52,7 +61,7 @@ const Services = () => {
                   {service.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

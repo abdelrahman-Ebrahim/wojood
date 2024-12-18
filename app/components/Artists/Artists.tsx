@@ -1,7 +1,9 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 import { FaInstagram } from "react-icons/fa";
 import { FiFacebook, FiTwitter } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 const artistsData = [
   {
@@ -37,15 +39,43 @@ const artistsData = [
 const Artists = () => {
   return (
     <section className="mt-16 font-rubik flex flex-col mx-[157px] text-center justify-center items-center">
-      <h2 className="font-semibold text-[38px]">فنانين الشهر</h2>
-      <p className="font-normal text-xl mt-4">
+      {/* whileInView Title */}
+      <motion.h2 
+        className="font-semibold text-[38px]" 
+        initial={{ opacity: 0, y: 20 }} // Start with slightly lower opacity and slide in
+        whileInView={{ opacity: 1, y: 0 }} // Fade in and move to position
+        transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
+      >
+        فنانين الشهر
+      </motion.h2>
+
+      {/* whileInView Subtitle */}
+      <motion.p 
+        className="font-normal text-xl mt-4"
+        initial={{ opacity: 0 }} // Start with hidden opacity
+        whileInView={{ opacity: 1 }} // Fade in
+        transition={{ delay: 0.3, duration: 0.6 }}
+      >
         نقدم لكم مجموعة من الأسماء التي أبهرتنا بأعمالها الفنية المتميزة لهذا الشهر
-      </p>
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[27px]">
+      </motion.p>
+
+      {/* Container with a fade-in effect for artist cards */}
+      <motion.div
+        className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[27px]"
+        initial="hidden"
+        whileInView="visible"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: { opacity: 1, transition: { delayChildren: 0.3, staggerChildren: 0.2 } },
+        }}
+      >
         {artistsData.map((artist, index) => (
-          <div
+          <motion.div
             key={index}
             className="flex flex-col border rounded-[14px] gap-[14px] pb-[14px] h-[380px] max-w-[300px]"
+            initial={{ opacity: 0, y: 50 }} // Start off-screen with opacity 0
+            whileInView={{ opacity: 1, y: 0 }} // Fade in and move to original position
+            transition={{ delay: index * 0.1, type: 'spring', stiffness: 100 }}
           >
             <Image
               src={artist.image}
@@ -64,7 +94,7 @@ const Artists = () => {
                   {artist.bio}
                 </p>
               </div>
-              <div className="flex gap-[14px] self-start mt-[20px]">
+              <div className="flex gap-[14px] self-start mt-[15px]">
                 {artist.social.map((icon, i) => (
                   <div
                     key={i}
@@ -75,9 +105,9 @@ const Artists = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

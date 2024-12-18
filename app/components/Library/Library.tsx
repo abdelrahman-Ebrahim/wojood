@@ -1,89 +1,157 @@
-import Image from "next/image";
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 
 const Library = () => {
   return (
     <section className="mt-16 text-center flex flex-col justify-center items-center gap-12 font-rubik">
-      {/* Header */}
-      <div className="flex flex-col justify-center items-center gap-4 mt-6">
-        <h2 className="font-semibold text-[38px]">مكتبة صور تنمو باستمرار</h2>
-        <p className="font-normal text-xl">
+      {/* Section Animation (Fade & Scale) */}
+      <motion.div
+        className="flex flex-col justify-center items-center gap-4 mt-6"
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 1.2,
+          ease: "easeOut",
+        }}
+      >
+        {/* Header */}
+        <motion.h2
+          className="font-semibold text-[38px]"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 1,
+            ease: "easeOut",
+          }}
+        >
+          مكتبة صور تنمو باستمرار
+        </motion.h2>
+        <motion.p
+          className="font-normal text-xl"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 1.2,
+            ease: "easeOut",
+          }}
+        >
           اكتشف تنوعا لا حدود له في عالم الصور مع مكتبة لا تنتهي من الفنون
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
 
-      {/* Filter Buttons */}
+      {/* Filter Buttons with scroll animations */}
       <div className="flex flex-col justify-center items-center gap-6 px-[117px]">
         <div className="flex justify-center items-center gap-[15px]">
-          <button className="bg-[#6152C11A] rounded-[26px] text-[#390089] flex justify-center items-center py-2 px-9">
+          <motion.button
+            className="bg-[#6152C11A] rounded-[26px] text-[#390089] flex justify-center items-center py-2 px-9"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            whileHover={{
+              scale: 1.1,
+              backgroundColor: "#04FF99",
+              color: "#390089",
+            }}
+          >
             فيكتور
-          </button>
-          <button className="bg-[#6152C11A] rounded-[26px] text-[#390089] flex justify-center items-center py-2 px-9">
+          </motion.button>
+          <motion.button
+            className="bg-[#6152C11A] rounded-[26px] text-[#390089] flex justify-center items-center py-2 px-9"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            whileHover={{
+              scale: 1.1,
+              backgroundColor: "#04FF99",
+              color: "#390089",
+            }}
+          >
             رسومات
-          </button>
-          <button className="bg-[#390089] rounded-[26px] text-white font-semibold flex justify-center items-center py-2 px-9">
+          </motion.button>
+          <motion.button
+            className="bg-[#390089] rounded-[26px] text-white font-semibold flex justify-center items-center py-2 px-9"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            whileHover={{
+              scale: 1.1,
+              backgroundColor: "#04FF99",
+              color: "#390089",
+            }}
+          >
             صور فوتوغرافية
-          </button>
+          </motion.button>
         </div>
 
-        {/* Image Grid 1 */}
+        {/* Image Grids */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-[13px] w-full">
-          {/* Image Wrapper */}
-          <div className="relative w-[328px] h-[338px] overflow-hidden rounded-[12px]">
-            <Image
-              src="/library1.png"
-              alt="library1"
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
-          <div className="relative w-[328px] h-[338px] overflow-hidden rounded-[12px]">
-            <Image
-              src="/library2.png"
-              alt="library2"
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
-          <div className="relative w-[328px] h-[338px] overflow-hidden rounded-[12px]">
-            <Image
-              src="/library3.png"
-              alt="library3"
-              layout="fill"
-              objectFit="cover"
-              className="w-full"
-            />
-          </div>
+          {["library1.png", "library2.png", "library3.png"].map(
+            (image, index) => (
+              <motion.div
+                className="relative w-[328px] h-[338px] overflow-hidden rounded-[12px]"
+                key={index}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 1.5,
+                  ease: "easeOut",
+                  delay: index * 0.3,
+                }}
+              >
+                <Image
+                  src={`/${image}`}
+                  alt={`library${index + 1}`}
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </motion.div>
+            )
+          )}
         </div>
 
-        {/* Image Grid 2 */}
+        {/* Image Grid 2 with fade-in & scale */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[20px] w-full">
-          {/* Image Wrapper */}
-          <div className="relative w-[481px] h-[293px] overflow-hidden">
-            <Image
-              src="/library4.png"
-              alt="library4"
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
-          <div className="relative w-[481px] h-[293px] overflow-hidden">
-            <Image
-              src="/library5.png"
-              alt="library5"
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
+          {["library4.png", "library5.png"].map((image, index) => (
+            <motion.div
+              className="relative w-[481px] h-[293px] overflow-hidden"
+              key={index}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 1.5,
+                ease: "easeOut",
+                delay: index * 0.3,
+              }}
+            >
+              <Image
+                src={`/${image}`}
+                alt={`library${index + 4}`}
+                layout="fill"
+                objectFit="cover"
+              />
+            </motion.div>
+          ))}
         </div>
 
-        <button className="flex justify-center items-center gap-2 bg-[#04FF99] rounded-[43px] px-[14px] py-2 mt-10 text-[#390089]">
-          <p className="font-medium text-[15px]">
-            مشاهدة المزيد
-          </p>
+        {/* Button with bounce effect */}
+        <motion.button
+          className="flex justify-center items-center gap-2 bg-[#04FF99] rounded-[43px] px-[14px] py-2 mt-10 text-[#390089]"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          whileHover={{ scale: 1.05 }}
+          transition={{
+            duration: 1.5,
+            type: "spring",
+            stiffness: 150,
+            damping: 15,
+          }}
+        >
+          <p className="font-medium text-[15px]">مشاهدة المزيد</p>
           <MdOutlineKeyboardArrowLeft size={15} />
-        </button>
+        </motion.button>
       </div>
     </section>
   );

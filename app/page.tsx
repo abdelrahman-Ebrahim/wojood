@@ -13,7 +13,7 @@ import Services from "./components/Services/Services";
 
 export default function Home() {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Hero />
       <Chosen />
       <ColorsSection />
