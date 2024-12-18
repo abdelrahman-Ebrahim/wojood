@@ -15,7 +15,7 @@ const Navbar = ({ toggleLanguage, lang }: NavbarProps) => {
           <span className="font-semibold">20%</span> على الصور المختارة
         </p>
       </div>
-      <nav className="flex justify-between items-center w-full px-[56px]">
+      <nav className="flex justify-between items-center w-full px-[56px] h-[63px]">
         <div className="flex justify-center items-center">
           <div className="ml-[49px]">
             <Image
