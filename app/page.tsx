@@ -3,6 +3,7 @@ import ArtSection from "./components/ArtSection/ArtSection";
 import CanvasSection from "./components/CanvasSection/CanvasSection";
 import Chosen from "./components/Chosen/Chosen";
 import ColorsSection from "./components/ColorsSection/ColorsSection";
+import Footer from "./components/Footer/Footer";
 import FramesSection from "./components/FramesSection/FramesSection";
 import Gallery from "./components/Gallery/Gallery";
 import Hero from "./components/Hero/Hero";
@@ -24,6 +25,7 @@ export default function Home() {
       <Library />
       <Services />
       <Artists />
+      <Footer />
     </div>
   );
 }

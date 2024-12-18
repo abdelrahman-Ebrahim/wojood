@@ -36,7 +36,7 @@ const artistsData = [
 
 const Artists = () => {
   return (
-    <section className="mt-16 font-rubik flex flex-col mx-[157px] text-center justify-center items-center mb-96">
+    <section className="mt-16 font-rubik flex flex-col mx-[157px] text-center justify-center items-center">
       <h2 className="font-semibold text-[38px]">فنانين الشهر</h2>
       <p className="font-normal text-xl mt-4">
         نقدم لكم مجموعة من الأسماء التي أبهرتنا بأعمالها الفنية المتميزة لهذا الشهر
