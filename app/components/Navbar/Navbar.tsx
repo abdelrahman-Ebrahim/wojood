@@ -1,7 +1,12 @@
 import Image from "next/image";
 import React from "react";
 
-const Navbar = () => {
+interface NavbarProps {
+  toggleLanguage: () => void;
+  lang: "ar" | "en";
+}
+
+const Navbar = ({ toggleLanguage, lang }: NavbarProps) => {
   return (
     <div className="text-center font-rubik">
       <div className="w-full bg-[#390089] text-center flex justify-center items-center text-base text-white h-[40px]">
@@ -181,7 +186,10 @@ const Navbar = () => {
               />
             </svg>
           </button>
-          <div className="flex justify-center items-center gap-1">
+          <button
+            onClick={toggleLanguage}
+            className="flex justify-center items-center gap-1"
+          >
             <svg
               width="23"
               height="23"
@@ -215,8 +223,10 @@ const Navbar = () => {
                 stroke-linejoin="round"
               />
             </svg>
-            <p className="text-lg font-semibold">En</p>
-          </div>
+            <p className="text-lg font-semibold">
+              {lang === "en" ? "ع" : "En"}
+            </p>
+          </button>
           <div className="flex flex-col justify-center items-center gap-1">
             <svg
               width="25"
