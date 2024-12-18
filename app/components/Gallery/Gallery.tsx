@@ -19,8 +19,8 @@ const Gallery = () => {
       {/* Top Button */}
       <div className="px-[171px] mt-[59px] flex self-end">
         <button className="flex justify-center items-center gap-2 bg-[#04FF99] rounded-[43px] px-[14px] py-2">
-          <p className="font-semibold text-[22px] text-[#140623]">مشاهدة المزيد</p>
-          <MdOutlineKeyboardArrowLeft size={24} />
+          <p className="font-semibold text-[15px] text-[#140623]">مشاهدة المزيد</p>
+          <MdOutlineKeyboardArrowLeft size={15} />
         </button>
       </div>
 

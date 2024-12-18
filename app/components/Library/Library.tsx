@@ -79,10 +79,10 @@ const Library = () => {
         </div>
 
         <button className="flex justify-center items-center gap-2 bg-[#04FF99] rounded-[43px] px-[14px] py-2 mt-10 text-[#390089]">
-          <p className="font-medium text-[22px]">
+          <p className="font-medium text-[15px]">
             مشاهدة المزيد
           </p>
-          <MdOutlineKeyboardArrowLeft size={24} />
+          <MdOutlineKeyboardArrowLeft size={15} />
         </button>
       </div>
     </section>

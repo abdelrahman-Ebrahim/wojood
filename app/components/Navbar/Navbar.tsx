@@ -187,7 +187,6 @@ const Navbar = ({ toggleLanguage, lang }: NavbarProps) => {
             </svg>
           </button>
           <button
-            onClick={toggleLanguage}
             className="flex justify-center items-center gap-1"
           >
             <svg
@@ -224,7 +223,7 @@ const Navbar = ({ toggleLanguage, lang }: NavbarProps) => {
               />
             </svg>
             <p className="text-lg font-semibold">
-              {lang === "en" ? "ع" : "En"}
+              En
             </p>
           </button>
           <div className="flex flex-col justify-center items-center gap-1">
