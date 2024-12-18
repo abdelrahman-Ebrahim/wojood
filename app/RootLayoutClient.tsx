@@ -8,12 +8,14 @@ export default function RootLayoutClient({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Initialize with Arabic (ar) as the default language.
+  // Initialize with Arabic as default language
   const [lang, setLang] = useState<"ar" | "en">("ar");
+  
+  // State to determine if the app has mounted
+  const [mounted, setMounted] = useState(false);
 
-  // Toggle the language between Arabic and English.
+  // Set language and direction
   const toggleLanguage = () => {
-    // Set the new language and update the document's lang and dir properties.
     setLang((prev) => {
       const newLang = prev === "ar" ? "en" : "ar";
       document.documentElement.lang = newLang;
@@ -22,11 +24,16 @@ export default function RootLayoutClient({
     });
   };
 
-  // Ensure the correct direction and language is applied when the component mounts.
+  // Wait until the page is mounted before applying lang and dir
   useEffect(() => {
+    setMounted(true); // This makes sure the rest of the app is rendered after initial setup
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
   }, [lang]);
+
+  if (!mounted) {
+    return null; // Return nothing while the app is waiting for language setup
+  }
 
   return (
     <>
