@@ -35,5 +35,12 @@
     "title2": "the beauty of nature",
     "subtitle1": "Paintings inspired by the beauty of nature",
     "subtitle2": "adding a touch of calm and magic to your home"
+  },
+
+  "Gallery" : {
+    "title" : "Bird with roses",
+    "subtitle" : "starting at ",
+    "price": "15.99 SAR",
+    "button": "See more"
   }
 }

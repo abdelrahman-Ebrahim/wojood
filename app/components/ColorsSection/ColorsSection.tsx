@@ -45,7 +45,7 @@ const ColorsSection = () => {
       whileInView="visible"
       viewport={{ once: false, amount: 0.2 }}
     >
-      <div className="flex justify-between items-center">
+      <div className="flex items-center gap-20">
         {/* Text Section */}
         <div
           className={`flex flex-col min-w-[364px] ${
@@ -64,9 +64,9 @@ const ColorsSection = () => {
 
           {/* Text Block 2 */}
           <motion.div className="text-start" variants={slideRightVariant}>
-            <h2 className="text-[40px] font-semibold relative inline-block">
+            <h2 className="text-[40px] font-semibold relative inline-block text-nowrap">
               <span className="relative">
-                <span className="absolute bottom-1 -left-[18px] w-[calc(100%+20px)] h-[24px] bg-[#04FF99] -z-10 text-nowrap" />
+                <span className="absolute bottom-1 -left-[18px] w-[calc(100%+20px)] h-[24px] bg-[#04FF99] -z-10" />
                 {t("title2")}
               </span>
             </h2>
