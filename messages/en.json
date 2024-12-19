@@ -94,5 +94,26 @@
 
     "title3": "Community",
     "description3": "Join our vibrant community and share your artistic and photographic creations."
+  },
+
+  "Artist": {
+    "title": "Artists of the month",
+    "subtitle": "We present to you a group of names that have impressed us with their distinguished artistic works this month.",
+
+    "artist1": "Mazen Al-Saadi",
+    "role1": "Documentary photographer",
+    "bio1": "I love documenting important moments and making documentaries that tell stories in a moving way.",
+
+    "artist2": "Ahmed Al-Ali",
+    "role2": "Wildlife photographer",
+    "bio2": "I love nature and spend most of my time photographing animals in their natural environments. I dream of publishing a photo book about wildlife.",
+
+    "artist3": "Youssef Al-Najjar",
+    "role3": "Digital Artist",
+    "bio3": "I love transforming ideas into stunning digital paintings. I use the latest technology to create unique art.",
+
+    "artist4": "Ali Hussein",
+    "role4": "portrait painter",
+    "bio4": "I dedicate my time to painting portraits. My works express characters and capture the essence of souls."
   }
 }
