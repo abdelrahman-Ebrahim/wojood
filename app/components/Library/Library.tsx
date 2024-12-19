@@ -2,9 +2,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
+import {
+  MdOutlineKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
+import { useLocale, useTranslations } from "next-intl";
 
 const Library = () => {
+  const t = useTranslations("Library");
+  const locale = useLocale();
   return (
     <section className="mt-16 text-center flex flex-col justify-center items-center gap-12 font-rubik">
       {/* Section Animation (Fade & Scale) */}
@@ -27,7 +33,7 @@ const Library = () => {
             ease: "easeOut",
           }}
         >
-          مكتبة صور تنمو باستمرار
+          {t("title")}
         </motion.h2>
         <motion.p
           className="font-normal text-xl"
@@ -38,7 +44,7 @@ const Library = () => {
             ease: "easeOut",
           }}
         >
-          اكتشف تنوعا لا حدود له في عالم الصور مع مكتبة لا تنتهي من الفنون
+          {t("subtitle")}
         </motion.p>
       </motion.div>
 
@@ -56,7 +62,7 @@ const Library = () => {
               color: "#390089",
             }}
           >
-            فيكتور
+            {t("btn1")}
           </motion.button>
           <motion.button
             className="bg-[#6152C11A] rounded-[26px] text-[#390089] flex justify-center items-center py-2 px-9"
@@ -69,7 +75,7 @@ const Library = () => {
               color: "#390089",
             }}
           >
-            رسومات
+            {t("btn2")}
           </motion.button>
           <motion.button
             className="bg-[#390089] rounded-[26px] text-white font-semibold flex justify-center items-center py-2 px-9"
@@ -82,7 +88,7 @@ const Library = () => {
               color: "#390089",
             }}
           >
-            صور فوتوغرافية
+            {t("btn3")}
           </motion.button>
         </div>
 
@@ -149,8 +155,12 @@ const Library = () => {
             damping: 15,
           }}
         >
-          <p className="font-medium text-[15px]">مشاهدة المزيد</p>
-          <MdOutlineKeyboardArrowLeft size={15} />
+          <p className="font-medium text-[15px]">{t("btn4")}</p>
+          {locale === "ar" ? (
+            <MdOutlineKeyboardArrowLeft size={15} />
+          ) : (
+            <MdOutlineKeyboardArrowRight size={15} />
+          )}
         </motion.button>
       </div>
     </section>

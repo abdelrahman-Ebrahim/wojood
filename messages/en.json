@@ -37,9 +37,9 @@
     "subtitle2": "adding a touch of calm and magic to your home"
   },
 
-  "Gallery" : {
-    "title" : "Bird with roses",
-    "subtitle" : "starting at ",
+  "Gallery": {
+    "title": "Bird with roses",
+    "subtitle": "starting at ",
     "price": "15.99 SAR",
     "button": "See more"
   },
@@ -51,15 +51,15 @@
     "subtitle2": "more beauty to your home."
   },
 
-  "Canvas" : {
+  "Canvas": {
     "header": "Newly added canvas",
-    "title" : "Bird with roses",
-    "subtitle" : "starting at ",
+    "title": "Bird with roses",
+    "subtitle": "starting at ",
     "price": "15.99 SAR",
     "button": "See more"
   },
 
-  "Frames" : {
+  "Frames": {
     "title1": "Vibrant panels",
     "title2": "telling stories",
     "subtitle1": "Discover pieces that tell your story",
@@ -68,11 +68,20 @@
   },
 
   "Join": {
-    "header1" : "Join...",
-    "header2" : "the largest artistic community",
-    "header3" : "in the Arab world",
-    "des1" : "Explore art, develop your skills as an artist, or buy and sell works ",
-    "des2" : "you can do it all here.",
+    "header1": "Join...",
+    "header2": "the largest artistic community",
+    "header3": "in the Arab world",
+    "des1": "Explore art, develop your skills as an artist, or buy and sell works ",
+    "des2": "you can do it all here.",
     "button": "Sign up, Artist"
+  },
+
+  "Library": {
+    "title": "Constantly growing photo library",
+    "subtitle": "Discover limitless diversity in the world of images with an endless library of art",
+    "btn1": "Victor",
+    "btn2": "Drawings",
+    "btn3": "Photographs",
+    "btn4": "See more"
   }
 }
