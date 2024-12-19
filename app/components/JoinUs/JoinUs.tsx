@@ -7,7 +7,7 @@ const JoinUs = () => {
   const t = useTranslations("Join");
   const locale = useLocale();
   return (
-    <section className="mt-16 mx-[112px] min-h-[350px] rounded-xl bg-center bg-cover bg-joinBg font-rubik relative">
+    <section className={`mt-16 mx-[112px] min-h-[350px] rounded-xl bg-center bg-cover ${locale === "ar" ? "bg-joinBg" : "bg-joinBgMirror"} font-rubik relative`}>
       {/* Overlay with animation */}
       <motion.div
         className="absolute inset-0 rounded-xl bg-[#00001B69] z-0"

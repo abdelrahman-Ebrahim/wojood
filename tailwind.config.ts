@@ -19,6 +19,7 @@ const config: Config = {
         canvasBackground: "url(/canvasBg.png)",
         canvas3: "url(/canvas3.png)",
         joinBg: "url(/JoinBg.png)",
+        joinBgMirror : "url(/JoinBgMirror.png)"
       },
       fontFamily: {
         rubik: ["rubik", "sans-serif"],
