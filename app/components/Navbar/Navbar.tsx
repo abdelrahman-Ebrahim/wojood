@@ -1,12 +1,8 @@
 import Image from "next/image";
 import React from "react";
+import LanguageChangeBtn from "../LanguageChangeBtn";
 
-interface NavbarProps {
-  toggleLanguage: () => void;
-  lang: "ar" | "en";
-}
-
-const Navbar = ({ toggleLanguage, lang }: NavbarProps) => {
+const Navbar = () => {
   return (
     <div className="text-center font-rubik">
       <div className="w-full bg-[#390089] text-center flex justify-center items-center text-base text-white h-[40px]">
@@ -39,39 +35,39 @@ const Navbar = ({ toggleLanguage, lang }: NavbarProps) => {
                   <path
                     d="M5.19604 7.77246C5.19604 5.84403 5.19604 4.87981 5.88072 4.28073C6.56539 3.68164 7.66734 3.68164 9.87124 3.68164H11.4297C13.6336 3.68164 14.7356 3.68164 15.4202 4.28073C16.1049 4.87981 16.1049 5.84403 16.1049 7.77246V13.9087H5.19604V7.77246Z"
                     stroke="#140623"
-                    stroke-width="1.5"
-                    stroke-linejoin="round"
+                    strokeWidth="1.5"
+                    strokeLinejoin="round"
                   />
                   <path
                     d="M4.51416 13.9087H16.7866"
                     stroke="#140623"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
                   />
                   <path
                     d="M9.76318 6.11059C10.6019 5.99038 11.9918 6.03847 10.8415 7.19246C9.40373 8.63496 7.2471 11.8807 9.76318 10.7988C12.2793 9.71701 13.3578 10.4382 12.2794 11.5201"
                     stroke="#140623"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                   <path
                     d="M10.6504 13.9087V16.6359"
                     stroke="#140623"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
                   />
                   <path
                     d="M5.87769 17.3177L7.9231 13.9087"
                     stroke="#140623"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
                   />
                   <path
                     d="M15.4231 17.3177L13.3777 13.9087"
                     stroke="#140623"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
                   />
                 </svg>
               </div>
@@ -89,29 +85,29 @@ const Navbar = ({ toggleLanguage, lang }: NavbarProps) => {
                   <path
                     d="M16.2467 6.30265V14.6972M14.8476 4.90356H6.45304M14.8476 16.0963H6.45304M5.05396 14.6972V6.30265"
                     stroke="#140623"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                   <path
                     d="M17.6458 4.90373C17.6458 5.67642 17.0195 6.30282 16.2467 6.30282C15.474 6.30282 14.8477 5.67642 14.8477 4.90373C14.8477 4.13103 15.474 3.50464 16.2467 3.50464C17.0195 3.50464 17.6458 4.13103 17.6458 4.90373Z"
                     stroke="#140623"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                   />
                   <path
                     d="M6.45321 4.90373C6.45321 5.67642 5.82681 6.30282 5.05412 6.30282C4.28142 6.30282 3.65503 5.67642 3.65503 4.90373C3.65503 4.13103 4.28142 3.50464 5.05412 3.50464C5.82681 3.50464 6.45321 4.13103 6.45321 4.90373Z"
                     stroke="#140623"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                   />
                   <path
                     d="M17.6458 16.0964C17.6458 16.8691 17.0195 17.4954 16.2467 17.4954C15.474 17.4954 14.8477 16.8691 14.8477 16.0964C14.8477 15.3236 15.474 14.6973 16.2467 14.6973C17.0195 14.6973 17.6458 15.3236 17.6458 16.0964Z"
                     stroke="#140623"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                   />
                   <path
                     d="M6.45321 16.0964C6.45321 16.8691 5.82681 17.4954 5.05412 17.4954C4.28142 17.4954 3.65503 16.8691 3.65503 16.0964C3.65503 15.3236 4.28142 14.6973 5.05412 14.6973C5.82681 14.6973 6.45321 15.3236 6.45321 16.0964Z"
                     stroke="#140623"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                   />
                 </svg>
               </div>
@@ -129,19 +125,19 @@ const Navbar = ({ toggleLanguage, lang }: NavbarProps) => {
                   <path
                     d="M7.57698 8.44913C8.14279 8.44913 8.60147 7.99045 8.60147 7.42464C8.60147 6.85883 8.14279 6.40015 7.57698 6.40015C7.01117 6.40015 6.55249 6.85883 6.55249 7.42464C6.55249 7.99045 7.01117 8.44913 7.57698 8.44913Z"
                     stroke="#140623"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                   <path
                     d="M4.16187 10.497C4.16187 7.43831 4.16187 5.90897 5.11207 4.95875C6.06229 4.00854 7.59163 4.00854 10.6503 4.00854C13.709 4.00854 15.2383 4.00854 16.1886 4.95875C17.1388 5.90897 17.1388 7.43831 17.1388 10.497C17.1388 13.5556 17.1388 15.085 16.1886 16.0353C15.2383 16.9854 13.709 16.9854 10.6503 16.9854C7.59163 16.9854 6.06229 16.9854 5.11207 16.0353C4.16187 15.085 4.16187 13.5556 4.16187 10.497Z"
                     stroke="#140623"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                   />
                   <path
                     d="M5.86938 16.6449C8.85575 13.0763 12.2035 8.36982 17.1371 11.5515"
                     stroke="#140623"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                   />
                 </svg>
               </div>
@@ -162,70 +158,31 @@ const Navbar = ({ toggleLanguage, lang }: NavbarProps) => {
               <path
                 d="M13.2593 5.19377C12.8776 5.19189 12.4722 5.19189 12.0413 5.19189C8.4048 5.19189 6.58656 5.19189 5.45685 6.3216C4.32715 7.45131 4.32715 9.26954 4.32715 12.906C4.32715 16.5424 4.32715 18.3607 5.45685 19.4904C6.58656 20.6201 8.4048 20.6201 12.0413 20.6201C15.6777 20.6201 17.4959 20.6201 18.6257 19.4904C19.7125 18.4036 19.7537 16.6794 19.7553 13.312"
                 stroke="#140623"
-                stroke-width="1.5"
-                stroke-linecap="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
               />
               <path
                 d="M4.32715 14.234C4.8298 14.161 5.33797 14.1249 5.847 14.1262C8.00041 14.0806 10.1011 14.7516 11.7742 16.0194C13.3259 17.1951 14.4162 18.8133 14.8833 20.6201"
                 stroke="#140623"
-                stroke-width="1.5"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinejoin="round"
               />
               <path
                 d="M19.7554 16.4757C18.8009 15.9923 17.8137 15.747 16.8209 15.7481C15.3173 15.7422 13.8289 16.2947 12.4473 17.372"
                 stroke="#140623"
-                stroke-width="1.5"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinejoin="round"
               />
               <path
                 d="M16.5073 6.40991C16.9064 5.99928 17.9688 4.37988 18.5374 4.37988M18.5374 4.37988C19.1059 4.37988 20.1683 5.99928 20.5674 6.40991M18.5374 4.37988V10.876"
                 stroke="#140623"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </button>
-          <button
-            className="flex justify-center items-center gap-1"
-          >
-            <svg
-              width="23"
-              height="23"
-              viewBox="0 0 23 23"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M11.4472 20.6666C16.5098 20.6666 20.6139 16.5625 20.6139 11.4999C20.6139 6.43731 16.5098 2.33325 11.4472 2.33325C6.38457 2.33325 2.28052 6.43731 2.28052 11.4999C2.28052 16.5625 6.38457 20.6666 11.4472 20.6666Z"
-                stroke="#141B34"
-                stroke-width="1.25"
-              />
-              <path
-                d="M7.78052 11.4999C7.78052 16.9999 11.4472 20.6666 11.4472 20.6666C11.4472 20.6666 15.1139 16.9999 15.1139 11.4999C15.1139 5.99992 11.4472 2.33325 11.4472 2.33325C11.4472 2.33325 7.78052 5.99992 7.78052 11.4999Z"
-                stroke="#141B34"
-                stroke-width="1.25"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M19.6973 14.25H3.19727"
-                stroke="#141B34"
-                stroke-width="1.25"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M19.6973 8.75H3.19727"
-                stroke="#141B34"
-                stroke-width="1.25"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <p className="text-lg font-semibold">
-              En
-            </p>
-          </button>
+          <LanguageChangeBtn/>
           <div className="flex flex-col justify-center items-center gap-1">
             <svg
               width="25"
@@ -268,13 +225,13 @@ const Navbar = ({ toggleLanguage, lang }: NavbarProps) => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_1_3516)">
+              <g clipPath="url(#clip0_1_3516)">
                 <path
                   d="M13.0148 21.0504L5.46039 13.1837C3.33252 10.9679 3.46652 7.33466 5.75132 5.29532C8.018 3.27214 11.4549 3.66501 13.2461 6.15204L13.5473 6.57015L13.8484 6.15204C15.6397 3.66501 19.0765 3.27214 21.3432 5.29532C23.628 7.33466 23.762 10.9679 21.6341 13.1837L14.0797 21.0504C13.7856 21.3565 13.3089 21.3565 13.0148 21.0504Z"
                   stroke="#333333"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </g>
               <defs>
@@ -302,14 +259,14 @@ const Navbar = ({ toggleLanguage, lang }: NavbarProps) => {
               <path
                 d="M12.9473 12C15.7087 12 17.9473 9.76142 17.9473 7C17.9473 4.23858 15.7087 2 12.9473 2C10.1858 2 7.94727 4.23858 7.94727 7C7.94727 9.76142 10.1858 12 12.9473 12Z"
                 stroke="#333333"
-                stroke-width="1.7"
+                strokeWidth="1.7"
               />
               <path
                 d="M17.9474 14H18.2991C19.812 14 21.0882 15.1266 21.2759 16.6279L21.6664 19.7519C21.8156 20.9456 20.8848 22 19.6818 22H6.21293C5.00994 22 4.07917 20.9456 4.22838 19.7519L4.61888 16.6279C4.80654 15.1266 6.08275 14 7.59572 14H7.94737"
                 stroke="#333333"
-                stroke-width="1.7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.7"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
             <p className="text-[10px] font-semibold">الحساب</p>
