@@ -49,5 +49,13 @@
     "title2": "in every angle",
     "subtitle1": "Discover unique artworks that will add",
     "subtitle2": "more beauty to your home."
+  },
+
+  "Canvas" : {
+    "header": "Newly added canvas",
+    "title" : "Bird with roses",
+    "subtitle" : "starting at ",
+    "price": "15.99 SAR",
+    "button": "See more"
   }
 }

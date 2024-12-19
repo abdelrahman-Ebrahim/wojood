@@ -1,10 +1,18 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React from "react";
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight, MdOutlineKeyboardArrowLeft } from "react-icons/md";
+import {
+  MdKeyboardArrowLeft,
+  MdKeyboardArrowRight,
+  MdOutlineKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
 import { motion } from "framer-motion";
+import { useLocale, useTranslations } from "next-intl";
 
 const CanvasSection = () => {
+  const t = useTranslations("Canvas");
+  const locale = useLocale();
   return (
     <section className="bg-canvasBackground bg-center bg-cover relative w-full flex flex-col font-rubik mt-16">
       {/* Top Button */}
@@ -20,18 +28,27 @@ const CanvasSection = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.5 }}
         >
-          كانفاس اضيف حديثا
+          {t("header")}
         </motion.p>
         <motion.button
           className="flex justify-center items-center gap-1 bg-[#04FF99] rounded-[43px] px-[14px] py-2"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.3, type: "spring", stiffness: 80, delay: 0.5 }}
+          transition={{
+            duration: 1.3,
+            type: "spring",
+            stiffness: 80,
+            delay: 0.5,
+          }}
         >
           <p className="font-semibold text-[15px] text-[#140623]">
-            مشاهدة المزيد
+            {t("button")}
           </p>
-          <MdOutlineKeyboardArrowLeft size={15} />
+          {locale === "ar" ? (
+            <MdOutlineKeyboardArrowLeft size={15} />
+          ) : (
+            <MdOutlineKeyboardArrowRight size={15} />
+          )}
         </motion.button>
       </motion.div>
 
@@ -39,7 +56,11 @@ const CanvasSection = () => {
       <div className="mt-6 px-[114px] flex justify-center items-center gap-8 pb-[59px]">
         {/* Left Arrow */}
         <div className="size-12 rounded-full flex justify-center items-center border border-[#D1D5DB] cursor-pointer">
-          <MdKeyboardArrowRight size={24} />
+          {locale === "ar" ? (
+            <MdKeyboardArrowRight size={24} />
+          ) : (
+            <MdKeyboardArrowLeft size={24} />
+          )}
         </div>
 
         {/* Card 1 with animation */}
@@ -62,8 +83,13 @@ const CanvasSection = () => {
               </div>
             </div>
           </div>
-          <p className="font-medium font-rubik text-[15px] mt-2">عصفور مع أزهار</p>
-          <p className="font-normal font-rubik text-[16px]">يبدأ من <span className="text-[#390089] font-bold">١٥.٩٩ ر.س</span></p>
+          <p className="font-medium font-rubik text-[15px] mt-2">
+            {t("title")}
+          </p>
+          <p className="font-normal font-rubik text-[16px]">
+            {t("subtitle")}{" "}
+            <span className="text-[#390089] font-bold">{t("price")}</span>
+          </p>
         </motion.div>
 
         {/* Card 2 with animation */}
@@ -86,8 +112,13 @@ const CanvasSection = () => {
               </div>
             </div>
           </div>
-          <p className="font-medium font-rubik text-[15px] mt-2">عصفور مع أزهار</p>
-          <p className="font-normal font-rubik text-[16px]">يبدأ من <span className="text-[#390089] font-bold">١٥.٩٩ ر.س</span></p>
+          <p className="font-medium font-rubik text-[15px] mt-2">
+            {t("title")}
+          </p>
+          <p className="font-normal font-rubik text-[16px]">
+            {t("subtitle")}
+            <span className="text-[#390089] font-bold">{t("price")}</span>
+          </p>
         </motion.div>
 
         {/* Card 3 with animation */}
@@ -104,8 +135,13 @@ const CanvasSection = () => {
               </div>
             </div>
           </div>
-          <p className="font-medium font-rubik text-[15px] mt-2">عصفور مع أزهار</p>
-          <p className="font-normal font-rubik text-[16px]">يبدأ من <span className="text-[#390089] font-bold">١٥.٩٩ ر.س</span></p>
+          <p className="font-medium font-rubik text-[15px] mt-2">
+            {t("title")}
+          </p>
+          <p className="font-normal font-rubik text-[16px]">
+            {t("subtitle")}{" "}
+            <span className="text-[#390089] font-bold">{t("price")}</span>
+          </p>
         </motion.div>
 
         {/* Card 4 with animation */}
@@ -128,13 +164,22 @@ const CanvasSection = () => {
               </div>
             </div>
           </div>
-          <p className="font-medium font-rubik text-[15px] mt-2">عصفور مع أزهار</p>
-          <p className="font-normal font-rubik text-[16px]">يبدأ من <span className="text-[#390089] font-bold">١٥.٩٩ ر.س</span></p>
+          <p className="font-medium font-rubik text-[15px] mt-2">
+            {t("title")}
+          </p>
+          <p className="font-normal font-rubik text-[16px]">
+            {t("subtitle")}
+            <span className="text-[#390089] font-bold">{t("price")}</span>
+          </p>
         </motion.div>
 
         {/* Right Arrow */}
         <div className="size-12 rounded-full flex justify-center items-center border border-[#D1D5DB] cursor-pointer">
-          <MdKeyboardArrowLeft size={24} />
+          {locale === "ar" ? (
+            <MdKeyboardArrowLeft size={24} />
+          ) : (
+            <MdKeyboardArrowRight size={24} />
+          )}
         </div>
       </div>
     </section>
