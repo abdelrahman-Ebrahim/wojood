@@ -1,11 +1,14 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import { CiSearch } from "react-icons/ci";
 import { IoIosArrowUp } from "react-icons/io";
+import { useTranslations } from "next-intl";
 
 const Hero = () => {
+  const t = useTranslations("Hero");
+  const buttonKeys = ["btn1", "btn2", "btn3"];
   // Animation Variants
   const fadeUpVariant = {
     hidden: { opacity: 0, y: 20 },
@@ -33,14 +36,13 @@ const Hero = () => {
           className="text-white font-extrabold text-[36px] max-w-[487px]"
           variants={fadeUpVariant}
         >
-          إستمتع بتجربة غنية تثري حواسك
-          <br /> وتلهم إبداعك...
+          {t("title")}
         </motion.p>
         <motion.p
           className="text-[#BAA3D9] font-normal mt-2"
           variants={fadeUpVariant}
         >
-          امتلك فنك. شارك قصتك. بِع حول العالم
+          {t("subtitle")}
         </motion.p>
 
         {/* Search Section */}
@@ -67,7 +69,7 @@ const Hero = () => {
                 height={18}
                 className="size-[18px]"
               />
-              <p>كانفاس</p>
+              <p>{t("button")}</p>
               <IoIosArrowUp size={16} />
             </motion.div>
             <motion.div
@@ -85,16 +87,16 @@ const Hero = () => {
           className="flex items-center gap-4 mt-6 text-white"
           variants={staggerContainer}
         >
-          <p>الأكثر بحثا :</p>
+          <p>{t("label")}</p>
           <div className="flex gap-3">
-            {["طبيعة", "مناسبات", "اليوم الوطني"].map((item, index) => (
+            {buttonKeys.map((key, index) => (
               <motion.div
                 key={index}
                 className="bg-[#FFFFFF38] px-4 py-[6px] rounded-[40px] backdrop-blur-custom"
                 variants={fadeUpVariant}
                 whileHover={{ scale: 1.1 }}
               >
-                <p>{item}</p>
+                <p>{t(key)}</p>
               </motion.div>
             ))}
           </div>

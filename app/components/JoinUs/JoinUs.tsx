@@ -7,7 +7,7 @@ const JoinUs = () => {
     <section className="mt-16 mx-[112px] min-h-[350px] rounded-xl bg-center bg-cover bg-joinBg font-rubik relative">
       {/* Overlay with animation */}
       <motion.div
-        className="absolute inset-0 rounded-xl bg-[rgba(0,0,0,0.5)] z-0"
+        className="absolute inset-0 rounded-xl bg-[#00001B69] z-0"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}

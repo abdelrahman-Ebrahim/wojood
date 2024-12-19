@@ -1,9 +1,9 @@
-import { NextIntlClientProvider } from "next-intl";
+import { NextIntlClientProvider, useLocale } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Navbar from "../components/Navbar/Navbar";
-import "../globals.css"
+import "../globals.css";
 
 export default async function LocaleLayout({
   children,
@@ -21,8 +21,11 @@ export default async function LocaleLayout({
   // side is the easiest way to get started
   const messages = await getMessages();
 
+  // Determine the text direction based on the locale
+  const direction = locale === "ar" ? "rtl" : "ltr";
+
   return (
-    <html lang={locale} dir="rtl">
+    <html lang={locale} dir={direction}>
       <body className="!font-rubik">
         <NextIntlClientProvider messages={messages}>
           <Navbar />

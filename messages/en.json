@@ -1,5 +1,39 @@
 {
-    "Index": {
-        "title": "Hello world!"
-    }
+  "Hero": {
+    "title": "Enjoy a rich experience that enriches your senses...",
+    "subtitle": "Own your art. Share your story. Sell worldwide",
+    "button": "Canvas",
+    "label": "Most Searched :",
+    "btn1": "Nature",
+    "btn2": "Occasions",
+    "btn3": "National Day"
+  },
+
+  "Navbar": {
+    "header": "Celebrating Saudi National Day 20% discount on selected images",
+    "btn1": "Canvas",
+    "btn2": "Poster",
+    "btn3": "Digital",
+    "yellowBtn": "Show your art",
+    "badge1": "Cart",
+    "badge2": "Favourites",
+    "badge3": "Account"
+  },
+
+  "Chosen": {
+    "title": "Chosen Sections",
+    "subtitle": "Explore a carefully curated selection of artworks to suit your taste.",
+    "card1Title": "Photographs",
+    "card2Title": "Arabic Calligraphy",
+    "card3Title": "Drawings",
+    "card4Title": "Paintings",
+    "cardLink": "More"
+  },
+
+  "Colors": {
+    "title1": "Colors inspired by",
+    "title2": "the beauty of nature",
+    "subtitle1": "Paintings inspired by the beauty of nature",
+    "subtitle2": "adding a touch of calm and magic to your home"
+  }
 }

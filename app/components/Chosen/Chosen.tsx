@@ -2,8 +2,11 @@
 import React from "react";
 import ImageCard from "../ImageCard/ImageCard";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const Chosen = () => {
+  const t = useTranslations("Chosen");
+
   // Variants
   const fadeUpVariant = {
     hidden: { opacity: 0, y: 30 },
@@ -20,6 +23,14 @@ const Chosen = () => {
     visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
   };
 
+  // Card details using translation
+  const cards = [
+    { imageSrc: "/Chosen4.png", altText: "Chosen4", title: t("card1Title"), linkText: t("cardLink") },
+    { imageSrc: "/Chosen2.png", altText: "Chosen2", title: t("card2Title"), linkText: t("cardLink") },
+    { imageSrc: "/Chosen3.png", altText: "Chosen3", title: t("card3Title"), linkText: t("cardLink") },
+    { imageSrc: "/Chosen1.png", altText: "Chosen1", title: t("card4Title"), linkText: t("cardLink") },
+  ];
+
   return (
     <motion.section
       className="mt-[90px] flex flex-col text-center font-rubik mx-[143px] mb-8"
@@ -33,13 +44,13 @@ const Chosen = () => {
         className="text-[#390089] font-semibold text-[34px]"
         variants={fadeUpVariant}
       >
-        أقسام مُختارة
+        {t("title")}
       </motion.h2>
       <motion.p
         className="mt-2 text-[#140623] font-normal text-xl"
         variants={fadeUpVariant}
       >
-        استكشِف مجموعة مُختارة من الأعمال الفنيّة المُميّزة بعناية لتُناسب ذوقك
+        {t("subtitle")}
       </motion.p>
 
       {/* Image Cards Section */}
@@ -48,41 +59,46 @@ const Chosen = () => {
           className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 px-[58px] mt-8 gap-8"
           variants={staggerContainer}
         >
+          {/* First Card */}
           <motion.div variants={cardVariant}>
             <ImageCard
-              imageSrc="/Chosen4.png"
-              altText="Chosen4"
-              title="صور فوتوغرافية"
-              linkText="المزيد"
+              imageSrc={cards[0].imageSrc}
+              altText={cards[0].altText}
+              title={cards[0].title}
+              linkText={cards[0].linkText}
             />
           </motion.div>
+
+          {/* Second & Third Cards Group */}
           <motion.div
             className="flex flex-col gap-[29px]"
             variants={staggerContainer}
           >
             <motion.div variants={cardVariant}>
               <ImageCard
-                imageSrc="/Chosen2.png"
-                altText="Chosen2"
-                title="الخط العربي"
-                linkText="المزيد"
+                imageSrc={cards[1].imageSrc}
+                altText={cards[1].altText}
+                title={cards[1].title}
+                linkText={cards[1].linkText}
               />
             </motion.div>
             <motion.div variants={cardVariant}>
               <ImageCard
-                imageSrc="/Chosen3.png"
-                altText="Chosen3"
-                title="رسومات"
-                linkText="المزيد"
+                imageSrc={cards[2].imageSrc}
+                altText={cards[2].altText}
+                title={cards[2].title}
+                linkText={cards[2].linkText}
               />
             </motion.div>
           </motion.div>
+
+          {/* Fourth Card */}
           <motion.div variants={cardVariant}>
             <ImageCard
-              imageSrc="/Chosen1.png"
-              altText="Chosen1"
-              title="لوحات"
-              linkText="المزيد"
+              imageSrc={cards[3].imageSrc}
+              altText={cards[3].altText}
+              title={cards[3].title}
+              linkText={cards[3].linkText}
             />
           </motion.div>
         </motion.div>

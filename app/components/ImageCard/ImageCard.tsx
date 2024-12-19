@@ -1,5 +1,6 @@
+import { useLocale } from "next-intl";
 import Image from "next/image";
-import { MdKeyboardArrowLeft } from "react-icons/md";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 interface ImageCardProps {
   imageSrc: string;
@@ -8,7 +9,13 @@ interface ImageCardProps {
   linkText: string;
 }
 
-const ImageCard: React.FC<ImageCardProps> = ({ imageSrc, altText, title, linkText }) => {
+const ImageCard: React.FC<ImageCardProps> = ({
+  imageSrc,
+  altText,
+  title,
+  linkText,
+}) => {
+  const locale = useLocale();
   return (
     <div className="relative overflow-hidden rounded-[20px]">
       {/* Image with rounded corners and overflow hidden */}
@@ -24,7 +31,11 @@ const ImageCard: React.FC<ImageCardProps> = ({ imageSrc, altText, title, linkTex
         <div className="flex justify-center items-center gap-2">
           <p className="font-medium text-sm">{linkText}</p>
           <span className="size-5 flex justify-center items-center rounded-full border border-black">
-            <MdKeyboardArrowLeft />
+            {locale === "ar" ? (
+              <MdKeyboardArrowLeft />
+            ) : (
+              <MdKeyboardArrowRight />
+            )}
           </span>
         </div>
       </div>

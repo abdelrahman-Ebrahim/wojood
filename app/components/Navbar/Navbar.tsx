@@ -1,19 +1,31 @@
 import Image from "next/image";
 import React from "react";
 import LanguageChangeBtn from "../LanguageChangeBtn";
+import { useLocale, useTranslations } from "next-intl";
 
 const Navbar = () => {
+  const locale = useLocale();
+  const t = useTranslations("Navbar");
   return (
     <div className="text-center font-rubik">
-      <div className="w-full bg-[#390089] text-center flex justify-center items-center text-base text-white h-[40px]">
-        <p>
-          إحتفالا باليوم الوطنى السعوية خصم{" "}
-          <span className="font-semibold">20%</span> على الصور المختارة
-        </p>
-      </div>
+<div className="w-full bg-[#390089] text-center flex justify-center items-center text-base text-white h-[40px]">
+  <p>
+    {t("header").split("20%").map((part, index, array) => (
+      <React.Fragment key={index}>
+        {part}
+        {index < array.length - 1 && <strong className="font-bold">20%</strong>}
+      </React.Fragment>
+    ))}
+  </p>
+</div>
+
       <nav className="flex justify-between items-center w-full px-[56px] h-[63px]">
         <div className="flex justify-center items-center">
-          <div className="ml-[49px]">
+          <div
+            className={`${
+              locale === "ar" ? "ml-[49px]" : "mr-[49px]"
+            } ml-[49px]`}
+          >
             <Image
               src={"/logo.png"}
               alt="logo"
@@ -71,7 +83,9 @@ const Navbar = () => {
                   />
                 </svg>
               </div>
-              <p className="text-[#140623] text-sm font-semibold">كانفاس</p>
+              <p className="text-[#140623] text-sm font-semibold">
+                {t("btn1")}
+              </p>
             </button>
             <button className="flex justify-center items-center bg-[#F7F7F8] gap-2 rounded-full px-4 py-2">
               <div>
@@ -111,7 +125,9 @@ const Navbar = () => {
                   />
                 </svg>
               </div>
-              <p className="text-[#140623] text-sm font-semibold">بوستر</p>
+              <p className="text-[#140623] text-sm font-semibold">
+                {t("btn2")}
+              </p>
             </button>
             <button className="flex justify-center items-center bg-[#F7F7F8] gap-2 rounded-full px-4 py-2">
               <div>
@@ -141,13 +157,15 @@ const Navbar = () => {
                   />
                 </svg>
               </div>
-              <p className="text-[#140623] text-sm font-semibold">ديجيتال</p>
+              <p className="text-[#140623] text-sm font-semibold">
+                {t("btn3")}
+              </p>
             </button>
           </div>
         </div>
         <div className="flex justify-center items-center gap-[30px]">
           <button className="bg-[#FDC856] flex justify-center items-center rounded-full px-4 py-2 gap-2">
-            <p className="font-semibold text-sm">انشر فنك</p>
+            <p className="font-semibold text-sm">{t("yellowBtn")}</p>
             <svg
               width="25"
               height="25"
@@ -182,7 +200,7 @@ const Navbar = () => {
               />
             </svg>
           </button>
-          <LanguageChangeBtn/>
+          <LanguageChangeBtn />
           <div className="flex flex-col justify-center items-center gap-1">
             <svg
               width="25"
@@ -215,7 +233,7 @@ const Navbar = () => {
                 fill="#333333"
               />
             </svg>
-            <p className="text-[10px] font-semibold">السلة</p>
+            <p className="text-[10px] font-semibold">{t("badge1")}</p>
           </div>
           <div className="flex flex-col justify-center items-center gap-1">
             <svg
@@ -246,7 +264,7 @@ const Navbar = () => {
               </defs>
             </svg>
 
-            <p className="text-[10px] font-semibold">المفضلة</p>
+            <p className="text-[10px] font-semibold">{t("badge2")}</p>
           </div>
           <div className="flex flex-col justify-center items-center gap-1">
             <svg
@@ -269,7 +287,7 @@ const Navbar = () => {
                 strokeLinejoin="round"
               />
             </svg>
-            <p className="text-[10px] font-semibold">الحساب</p>
+            <p className="text-[10px] font-semibold">{t("badge3")}</p>
           </div>
         </div>
       </nav>
