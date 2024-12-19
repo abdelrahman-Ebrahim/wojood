@@ -65,5 +65,14 @@
     "subtitle1": "Discover pieces that tell your story",
     "subtitle2": "and add an artistic touch to your home that expresses",
     "subtitle3": "you."
+  },
+
+  "Join": {
+    "header1" : "Join...",
+    "header2" : "the largest artistic community",
+    "header3" : "in the Arab world",
+    "des1" : "Explore art, develop your skills as an artist, or buy and sell works ",
+    "des2" : "you can do it all here.",
+    "button": "Sign up, Artist"
   }
 }
