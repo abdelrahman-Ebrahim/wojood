@@ -14,6 +14,7 @@ const config: Config = {
       },
       backgroundImage: {
         heroBackground: "url(/hero-cover@2x.png)",
+        heroMirrorBackground: "url(/heroMirrorBg.png)",
         galleryBackground: "url(/galleryBg.png)",
         canvasBackground: "url(/canvasBg.png)",
         canvas3: "url(/canvas3.png)",
@@ -43,7 +44,6 @@ const config: Config = {
       `,
       },
     },
-    
   },
   plugins: [],
 };

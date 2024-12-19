@@ -4,10 +4,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { CiSearch } from "react-icons/ci";
 import { IoIosArrowUp } from "react-icons/io";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const Hero = () => {
   const t = useTranslations("Hero");
+  const locale = useLocale();
   const buttonKeys = ["btn1", "btn2", "btn3"];
   // Animation Variants
   const fadeUpVariant = {
@@ -22,7 +23,9 @@ const Hero = () => {
 
   return (
     <motion.div
-      className="bg-heroBackground bg-center bg-cover relative w-full pb-24 hero"
+      className={`${
+        locale === "ar" ? "bg-heroBackground" : "bg-heroMirrorBackground"
+      }  bg-center bg-cover relative w-full pb-24 hero`}
       initial="hidden"
       whileInView="visible"
       variants={staggerContainer}
