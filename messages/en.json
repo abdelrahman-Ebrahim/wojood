@@ -57,5 +57,13 @@
     "subtitle" : "starting at ",
     "price": "15.99 SAR",
     "button": "See more"
+  },
+
+  "Frames" : {
+    "title1": "Vibrant panels",
+    "title2": "telling stories",
+    "subtitle1": "Discover pieces that tell your story",
+    "subtitle2": "and add an artistic touch to your home that expresses",
+    "subtitle3": "you."
   }
 }
