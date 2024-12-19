@@ -115,5 +115,25 @@
     "artist4": "Ali Hussein",
     "role4": "portrait painter",
     "bio4": "I dedicate my time to painting portraits. My works express characters and capture the essence of souls."
+  },
+
+  "Footer": {
+    "address" : "Riyadh, Al Sulaymaniyah District, King Abdulaziz Road",
+    "tax" : "Tax number: 31042565670000",
+    "support" : "Technical support: +966570133338",
+
+    "title1" : "Important Links",
+    "title1link1": "Who we are",
+    "title1link2": "Publish your art",
+
+    "title2" : "Help",
+    "title2link1": "FAQ",
+    "title2link2": "Contact us",
+
+    "title3": "Legal",
+    "title3link1" : "Privacy policy",
+    "title3link2": "Terms & Conditions",
+
+    "copyright": "All rights reserved to Wojood 2024©"
   }
 }

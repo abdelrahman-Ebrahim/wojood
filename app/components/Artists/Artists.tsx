@@ -58,7 +58,7 @@ const Artists = () => {
 
       {/* whileInView Subtitle */}
       <motion.p
-        className="font-normal text-xl mt-4"
+        className="text-xl mt-4 font-rubik font-normal"
         initial={{ opacity: 0 }} // Start with hidden opacity
         whileInView={{ opacity: 1 }} // Fade in
         transition={{ delay: 0.3, duration: 0.6 }}
