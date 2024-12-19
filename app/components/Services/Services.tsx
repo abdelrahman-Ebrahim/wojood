@@ -1,36 +1,34 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import React from "react";
-
-const serviceItems = [
-  {
-    id: 1,
-    imageSrc: "/services1.png",
-    altText: "services1",
-    title: "الفنون",
-    description:
-      "اجعل منزلك معرضًا فنيًا خاصًا بك مع لوحاتنا الفنية وبوستراتنا عالية الجودة.",
-  },
-  {
-    id: 2,
-    imageSrc: "/services2.png",
-    altText: "services2",
-    title: "المحتوى",
-    description:
-      "اكتشف مزيجًا فريدًا من المحتوى الرقمي والمطبوعات عالية الجودة على منصة وجود.",
-  },
-  {
-    id: 3,
-    imageSrc: "/services3.png",
-    altText: "services3",
-    title: "مجتمعنا",
-    description:
-      "إنضم إلى مجتمعنا النابض بالابداع وشاركنا إبداعاتك واعمالك الفنية والتصويرية.",
-  },
-];
+import { useTranslations } from "next-intl";
 
 const Services = () => {
+  const t = useTranslations("Services");
+  const serviceItems = [
+    {
+      id: 1,
+      imageSrc: "/services1.png",
+      altText: "services1",
+      title: t("title1"),
+      description: t("description1"),
+    },
+    {
+      id: 2,
+      imageSrc: "/services2.png",
+      altText: "services2",
+      title: t("title2"),
+      description: t("description2"),
+    },
+    {
+      id: 3,
+      imageSrc: "/services3.png",
+      altText: "services3",
+      title: t("title3"),
+      description: t("description3"),
+    },
+  ];
   return (
     <section className="mt-16 text-center font-rubik">
       <div className="my-4 mx-[86px]">

@@ -83,5 +83,16 @@
     "btn2": "Drawings",
     "btn3": "Photographs",
     "btn4": "See more"
+  },
+
+  "Services": {
+    "title1": "Art",
+    "description1": "Turn your home into a private art gallery with our high-quality paintings and posters.",
+
+    "title2": "Content",
+    "description2": "Discover a unique mix of digital content and high-quality prints on Wujud.",
+
+    "title3": "Community",
+    "description3": "Join our vibrant community and share your artistic and photographic creations."
   }
 }
