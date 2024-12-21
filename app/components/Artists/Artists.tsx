@@ -45,10 +45,10 @@ const Artists = () => {
   ];
 
   return (
-    <section className="mt-16 font-rubik flex flex-col mx-[157px] text-center justify-center items-center">
+    <section className="mt-16 font-rubik flex flex-col lg:mx-5 xl:mx-[157px] text-center justify-center items-center">
       {/* whileInView Title */}
       <motion.h2
-        className="font-semibold text-[38px]"
+        className="font-semibold text-3xl md:text-[38px]"
         initial={{ opacity: 0, y: 20 }} // Start with slightly lower opacity and slide in
         whileInView={{ opacity: 1, y: 0 }} // Fade in and move to position
         transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
@@ -58,7 +58,7 @@ const Artists = () => {
 
       {/* whileInView Subtitle */}
       <motion.p
-        className="text-xl mt-4 font-rubik font-normal"
+        className="text-lg md:text-xl mt-4 font-rubik font-normal"
         initial={{ opacity: 0 }} // Start with hidden opacity
         whileInView={{ opacity: 1 }} // Fade in
         transition={{ delay: 0.3, duration: 0.6 }}
@@ -106,7 +106,7 @@ const Artists = () => {
                   {artist.bio}
                 </p>
               </div>
-              <div className="flex gap-[14px] items-end mt-[15px]">
+              <div className="flex gap-[14px] items-end mt-[15px] mb-[15px] lg:mb-0">
                 {artist.social.map((icon, i) => (
                   <div
                     key={i}
