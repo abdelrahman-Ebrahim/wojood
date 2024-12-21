@@ -45,7 +45,7 @@ const ColorsSection = () => {
       whileInView="visible"
       viewport={{ once: false, amount: 0.2 }}
     >
-      <div className="flex flex-col lg:flex-row items-center lg:gap-10 xl:gap-20">
+      <div className="flex flex-col lg:flex-row items-center justify-between lg:gap-10 xl:gap-20">
         {/* Text Section */}
         <div
           className={`flex flex-col min-w-[364px] ${

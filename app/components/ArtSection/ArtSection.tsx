@@ -9,12 +9,12 @@ const ArtSection = () => {
   const locale = useLocale();
   return (
     <section className="mt-16 text-center font-rubik">
-      <div className="flex flex-col lg:flex-row gap-[60px] md:gap-[127px] justify-center items-center py-10 md:py-[92px]">
+      <div className="flex flex-col lg:flex-row gap-[60px] md:gap-[127px] justify-center 2xl:justify-between items-center py-10 md:py-[92px]">
         {/* Image Section */}
         <motion.div
           className={`${
             locale === "ar" ? "lg:mr-[200px] xl:mr-[137px]" : "lg:ml-[200px] xl:ml-[137px]"
-          }  relative w-full flex justify-center items-center`}
+          }  relative w-full 2xl:w-fit flex justify-center items-center`}
           initial={{ opacity: 0, y: 100 }} // Start with opacity 0 and below
           whileInView={{ opacity: 1, y: 0 }} // whileInView to full opacity and original Y position
           transition={{ duration: 1.5, ease: "easeOut" }} // Transition settings
