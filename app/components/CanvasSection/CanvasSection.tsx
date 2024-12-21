@@ -17,13 +17,13 @@ const CanvasSection = () => {
     <section className="bg-canvasBackground bg-center bg-cover relative w-full flex flex-col font-rubik mt-16">
       {/* Top Button */}
       <motion.div
-        className="px-[171px] mt-[59px] flex justify-between"
+        className="px-[20px] md:px-[40px] lg:px-[80px] xl:px-[171px] mt-[59px] flex justify-between items-center w-full"
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.5, type: "spring", stiffness: 80 }}
       >
         <motion.p
-          className="text-[22px] font-semibold"
+          className="text-base lg:text-[22px] font-semibold"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.5 }}
@@ -45,17 +45,17 @@ const CanvasSection = () => {
             {t("button")}
           </p>
           {locale === "ar" ? (
-            <MdOutlineKeyboardArrowLeft size={15} />
+            <MdOutlineKeyboardArrowLeft className="md:size-[24px] size-[12px]" />
           ) : (
-            <MdOutlineKeyboardArrowRight size={15} />
+            <MdOutlineKeyboardArrowRight className="md:size-[24px] size-[12px]" />
           )}
         </motion.button>
       </motion.div>
 
       {/* Gallery */}
-      <div className="mt-6 px-[114px] flex justify-center items-center gap-8 pb-[59px]">
+      <div className="mt-6 lg:px-[50px] xl:px-[114px] flex justify-center items-center gap-2 xl:gap-8 pb-[59px]">
         {/* Left Arrow */}
-        <div className="size-12 rounded-full flex justify-center items-center border border-[#D1D5DB] cursor-pointer">
+        <div className="hidden md:size-12 rounded-full md:flex justify-center items-center border border-[#D1D5DB] cursor-pointer">
           {locale === "ar" ? (
             <MdKeyboardArrowRight size={24} />
           ) : (
@@ -70,7 +70,7 @@ const CanvasSection = () => {
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1.2, type: "spring", stiffness: 150 }}
         >
-          <div className="bg-[#F5F5F5] rounded-[12px] size-[241px]">
+          <div className="bg-[#F5F5F5] rounded-[12px] size-[180px] sm:size-[220px] md:size-[200px] lg:size-[220px] xl:size-[241px]">
             <div className="p-[50px]">
               <div className="border-[7px] border-[#CEA956]">
                 <Image
@@ -99,7 +99,7 @@ const CanvasSection = () => {
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1.2, type: "spring", stiffness: 150 }}
         >
-          <div className="bg-[#F5F5F5] rounded-[12px] size-[241px]">
+          <div className="bg-[#F5F5F5] rounded-[12px] size-[180px] sm:size-[220px] md:size-[200px] lg:size-[220px] xl:size-[241px]">
             <div className="py-[50px] px-[22px]">
               <div className="border-[7px] border-[#CEA956]">
                 <Image
@@ -123,13 +123,13 @@ const CanvasSection = () => {
 
         {/* Card 3 with animation */}
         <motion.div
-          className="flex flex-col items-center justify-center"
+          className="hidden lg:flex flex-col items-center justify-center"
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1.2, type: "spring", stiffness: 150 }}
         >
-          <div className="bg-[#F5F5F5] rounded-[12px] size-[241px]">
-            <div className="py-[60px] px-[30px]">
+          <div className="bg-[#F5F5F5] rounded-[12px] size-[180px] sm:size-[220px] md:size-[200px] lg:size-[220px] xl:size-[241px]">
+            <div className="py-[60px] px-[30px] flex">
               <div className="border-[7px] border-[#CEA956] -rotate-90 overflow-hidden w-[195px] h-[135px] relative">
                 <div className="bg-canvas3 bg-center bg-cover h-[200px] w-[200px] rotate-90" />
               </div>
@@ -146,12 +146,12 @@ const CanvasSection = () => {
 
         {/* Card 4 with animation */}
         <motion.div
-          className="flex flex-col items-center justify-center"
+          className="hidden md:flex flex-col items-center justify-center"
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 1.2, type: "spring", stiffness: 150 }}
         >
-          <div className="bg-[#F5F5F5] rounded-[12px] size-[241px]">
+          <div className="bg-[#F5F5F5] rounded-[12px] size-[180px] sm:size-[220px] md:size-[200px] lg:size-[220px] xl:size-[241px]">
             <div className="py-[60px] px-[30px]">
               <div className="">
                 <Image
@@ -174,11 +174,11 @@ const CanvasSection = () => {
         </motion.div>
 
         {/* Right Arrow */}
-        <div className="size-12 rounded-full flex justify-center items-center border border-[#D1D5DB] cursor-pointer">
+        <div className="hidden md:size-12 rounded-full md:flex justify-center items-center border border-[#D1D5DB] cursor-pointer">
           {locale === "ar" ? (
-            <MdKeyboardArrowLeft size={24} />
+            <MdKeyboardArrowLeft className="md:size-[24px] size-[12px]" />
           ) : (
-            <MdKeyboardArrowRight size={24} />
+            <MdKeyboardArrowRight className="md:size-[24px] size-[12px]" />
           )}
         </div>
       </div>
