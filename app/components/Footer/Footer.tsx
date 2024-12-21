@@ -15,7 +15,7 @@ import { useTranslations } from "next-intl";
 const Footer = () => {
   const t = useTranslations("Footer");
   return (
-    <footer className="flex flex-col justify-center items-center gap-[10px] font-rubik w-full py-[45px] px-[60px]">
+    <footer className="flex flex-col justify-center items-center gap-[10px] font-rubik w-full py-[45px] px-5 xl:px-[60px]">
       {/* Main Footer with Scroll Animation */}
       <motion.div
         className="rounded-[16px] bg-[#EFE9FF] mt-[19px] mx-[38px] w-full"

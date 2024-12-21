@@ -9,7 +9,7 @@ const FramesSection = () => {
   const locale = useLocale();
   return (
     <section className="mt-16 text-center font-rubik lg:mx-10 xl:mx-0">
-      <div className={`flex flex-col lg:flex-row justify-center items-center ${locale === "ar" ? "gap-[80px]" : "gap-[200px]"}`}>
+      <div className={`flex flex-col lg:flex-row justify-center items-center ${locale === "ar" ? " gap-5 lg:gap-[80px]" : "gap-5 lg:gap-[200px]"}`}>
         {/* Text Section */}
         <motion.div
           className="flex flex-col justify-center items-center min-w-[364px]"
