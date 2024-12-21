@@ -83,7 +83,7 @@ const Footer = () => {
 
             {/* Right Columns (Important Links) */}
             <motion.div
-              className="col-span-2 flex justify-center items-start gap-5 sm:gap-10 mt-5 md:mt-0"
+              className="col-span-2 flex justify-start sm:justify-center items-start gap-5 sm:gap-10 mt-5 md:mt-0 flex-wrap sm:flex-nowrap"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.8 }}
