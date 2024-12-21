@@ -25,18 +25,18 @@ const Hero = () => {
     <motion.div
       className={`${
         locale === "ar" ? "bg-heroBackground" : "bg-heroMirrorBackground"
-      }  bg-center bg-cover relative w-full pb-24 hero`}
+      }  bg-center bg-cover relative w-full pb-32 md:pb-28 lg:pb-24 hero`}
       initial="hidden"
       whileInView="visible"
       variants={staggerContainer}
     >
       <motion.div
-        className="flex flex-col font-rubik mx-[120px] pt-16"
+        className="flex flex-col font-rubik mx-[40px] md:mx-[120px] pt-16"
         variants={staggerContainer}
       >
         {/* Headings */}
         <motion.p
-          className="text-white font-extrabold text-[36px] max-w-[487px]"
+          className="text-white font-extrabold text-[22px] md:text-[36px] md:max-w-[487px]"
           variants={fadeUpVariant}
         >
           {t("title")}
@@ -72,7 +72,7 @@ const Hero = () => {
                 height={18}
                 className="size-[18px]"
               />
-              <p>{t("button")}</p>
+              <p className="text-sm md:text-base">{t("button")}</p>
               <IoIosArrowUp size={16} />
             </motion.div>
             <motion.div
@@ -87,15 +87,15 @@ const Hero = () => {
 
         {/* Popular Search Section */}
         <motion.div
-          className="flex items-center gap-4 mt-6 text-white"
+          className="flex items-center gap-1 md:gap-4 mt-6 text-white flex-wrap sm:flex-nowrap"
           variants={staggerContainer}
         >
-          <p>{t("label")}</p>
+          <p className="text-nowrap">{t("label")}</p>
           <div className="flex gap-3">
             {buttonKeys.map((key, index) => (
               <motion.div
                 key={index}
-                className="bg-[#FFFFFF38] px-4 py-[6px] rounded-[40px] backdrop-blur-custom"
+                className="bg-[#FFFFFF38] px-2 py-2 md:px-4 md:py-[6px] rounded-[40px] backdrop-blur-custom text-nowrap"
                 variants={fadeUpVariant}
                 whileHover={{ scale: 1.1 }}
               >

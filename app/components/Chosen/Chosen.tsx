@@ -33,7 +33,7 @@ const Chosen = () => {
 
   return (
     <motion.section
-      className="mt-[90px] flex flex-col text-center font-rubik mx-[143px] mb-8"
+      className="mt-[90px] flex flex-col text-center font-rubik lg:mx-0 xl:mx-[143px] mb-8"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.2 }}
@@ -41,22 +41,22 @@ const Chosen = () => {
     >
       {/* Heading */}
       <motion.h2
-        className="text-[#390089] font-semibold text-[34px]"
+        className="text-[#390089] font-semibold text-xl md:text-[34px]"
         variants={fadeUpVariant}
       >
         {t("title")}
       </motion.h2>
       <motion.p
-        className="mt-2 text-[#140623] font-normal text-xl"
+        className="mt-2 text-[#140623] font-normal text-base md:text-xl"
         variants={fadeUpVariant}
       >
         {t("subtitle")}
       </motion.p>
 
       {/* Image Cards Section */}
-      <div className="px-[58px]">
+      <div className="md:px-2 lg:px-[58px]">
         <motion.div
-          className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 px-[58px] mt-8 gap-8"
+          className="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 px-5 md:px-2 lg:px-[58px] mt-8 gap-8"
           variants={staggerContainer}
         >
           {/* First Card */}
@@ -71,7 +71,7 @@ const Chosen = () => {
 
           {/* Second & Third Cards Group */}
           <motion.div
-            className="flex flex-col gap-[29px]"
+            className="flex flex-col gap-4 lg:gap-[29px]"
             variants={staggerContainer}
           >
             <motion.div variants={cardVariant}>

@@ -7,7 +7,7 @@ const LanguageChangeBtn = () => {
   return (
     <Link
       href={`/${locale.toLowerCase() === "en" ? "ar" : "en"}`}
-      className="flex justify-center items-center gap-1"
+      className="hidden md:flex justify-center items-center gap-1"
     >
       <svg
         width="23"

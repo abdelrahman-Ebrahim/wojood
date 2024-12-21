@@ -7,24 +7,28 @@ const Navbar = () => {
   const locale = useLocale();
   const t = useTranslations("Navbar");
   return (
-    <div className="text-center font-rubik">
-<div className="w-full bg-[#390089] text-center flex justify-center items-center text-base text-white h-[40px]">
-  <p>
-    {t("header").split("20%").map((part, index, array) => (
-      <React.Fragment key={index}>
-        {part}
-        {index < array.length - 1 && <strong className="font-bold">20%</strong>}
-      </React.Fragment>
-    ))}
-  </p>
-</div>
+    <div className="text-center font-rubik overflow-hidden">
+      <div className="w-full bg-[#390089] text-center flex justify-center items-center text-sm px-5 md:px-0 md:text-base text-white h-[40px]">
+        <p>
+          {t("header")
+            .split("20%")
+            .map((part, index, array) => (
+              <React.Fragment key={index}>
+                {part}
+                {index < array.length - 1 && (
+                  <strong className="font-bold">20%</strong>
+                )}
+              </React.Fragment>
+            ))}
+        </p>
+      </div>
 
-      <nav className="flex justify-between items-center w-full px-[56px] h-[63px]">
+      <nav className="flex justify-between items-center w-full px-5 md:px-[56px] h-[63px]">
         <div className="flex justify-center items-center">
           <div
             className={`${
               locale === "ar" ? "ml-[49px]" : "mr-[49px]"
-            } ml-[49px]`}
+            }`}
           >
             <Image
               src={"/logo.png"}
@@ -34,7 +38,8 @@ const Navbar = () => {
               className="w-full"
             />
           </div>
-          <div className="flex justify-center items-center gap-8">
+
+          <div className="hidden lg:flex justify-center items-center gap-8">
             <button className="flex justify-center items-center bg-[#F7F7F8] gap-2 rounded-full px-4 py-2">
               <div>
                 <svg
@@ -164,7 +169,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="flex justify-center items-center gap-[30px]">
-          <button className="bg-[#FDC856] flex justify-center items-center rounded-full px-4 py-2 gap-2">
+          <button className="bg-[#FDC856] hidden lg:flex justify-center items-center rounded-full px-4 py-2 gap-2">
             <p className="font-semibold text-sm">{t("yellowBtn")}</p>
             <svg
               width="25"
@@ -266,7 +271,8 @@ const Navbar = () => {
 
             <p className="text-[10px] font-semibold">{t("badge2")}</p>
           </div>
-          <div className="flex flex-col justify-center items-center gap-1">
+          {/* Account Button */}
+          <div className="hidden md:flex flex-col justify-center items-center gap-1">
             <svg
               width="25"
               height="24"
@@ -288,6 +294,54 @@ const Navbar = () => {
               />
             </svg>
             <p className="text-[10px] font-semibold">{t("badge3")}</p>
+          </div>
+
+          {/* Mobile toggler */}
+          <div className="block md:hidden cursor-pointer">
+            <svg
+              width="26"
+              height="26"
+              viewBox="0 0 26 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M25.1789 22.4183C25.1789 20.9846 24.0169 19.8223 22.5836 19.8223C21.1503 19.8223 19.9883 20.9846 19.9883 22.4183C19.9883 23.8521 21.1503 25.0144 22.5836 25.0144C24.0169 25.0144 25.1789 23.8521 25.1789 22.4183Z"
+                fill="#141B34"
+              />
+              <path
+                d="M16.1789 22.4183C16.1789 20.9846 15.0169 19.8223 13.5836 19.8223C12.1503 19.8223 10.9883 20.9846 10.9883 22.4183C10.9883 23.8521 12.1503 25.0144 13.5836 25.0144C15.0169 25.0144 16.1789 23.8521 16.1789 22.4183Z"
+                fill="#141B34"
+              />
+              <path
+                d="M6.17893 22.4183C6.17893 20.9846 5.01692 19.8223 3.58361 19.8223C2.15029 19.8223 0.988281 20.9846 0.988281 22.4183C0.988281 23.8521 2.15029 25.0144 3.58361 25.0144C5.01692 25.0144 6.17893 23.8521 6.17893 22.4183Z"
+                fill="#141B34"
+              />
+              <path
+                d="M25.1789 13.4183C25.1789 11.9846 24.0169 10.8223 22.5836 10.8223C21.1503 10.8223 19.9883 11.9846 19.9883 13.4183C19.9883 14.8521 21.1503 16.0144 22.5836 16.0144C24.0169 16.0144 25.1789 14.8521 25.1789 13.4183Z"
+                fill="#141B34"
+              />
+              <path
+                d="M25.1789 3.41807C25.1789 1.98431 24.0169 0.822021 22.5836 0.822021C21.1503 0.822021 19.9883 1.98431 19.9883 3.41807C19.9883 4.85183 21.1503 6.01412 22.5836 6.01412C24.0169 6.01412 25.1789 4.85183 25.1789 3.41807Z"
+                fill="#141B34"
+              />
+              <path
+                d="M16.1789 13.4183C16.1789 11.9846 15.0169 10.8223 13.5836 10.8223C12.1503 10.8223 10.9883 11.9846 10.9883 13.4183C10.9883 14.8521 12.1503 16.0144 13.5836 16.0144C15.0169 16.0144 16.1789 14.8521 16.1789 13.4183Z"
+                fill="#141B34"
+              />
+              <path
+                d="M16.1789 3.41831C16.1789 1.98455 15.0169 0.822266 13.5836 0.822266C12.1503 0.822266 10.9883 1.98455 10.9883 3.41831C10.9883 4.85208 12.1503 6.01436 13.5836 6.01436C15.0169 6.01436 16.1789 4.85208 16.1789 3.41831Z"
+                fill="#141B34"
+              />
+              <path
+                d="M6.17893 13.4183C6.17893 11.9846 5.01692 10.8223 3.58361 10.8223C2.15029 10.8223 0.988281 11.9846 0.988281 13.4183C0.988281 14.8521 2.15029 16.0144 3.58361 16.0144C5.01692 16.0144 6.17893 14.8521 6.17893 13.4183Z"
+                fill="#141B34"
+              />
+              <path
+                d="M6.17893 3.41831C6.17893 1.98455 5.01692 0.822266 3.58361 0.822266C2.15029 0.822266 0.988281 1.98455 0.988281 3.41831C0.988281 4.85208 2.15029 6.01436 3.58361 6.01436C5.01692 6.01436 6.17893 4.85208 6.17893 3.41831Z"
+                fill="#141B34"
+              />
+            </svg>
           </div>
         </div>
       </nav>
