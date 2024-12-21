@@ -31,8 +31,8 @@ const Services = () => {
   ];
   return (
     <section className="mt-16 text-center font-rubik">
-      <div className="my-4 mx-[86px]">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-[115px] px-[65px]">
+      <div className="my-4 mx-5 lg:mx-[86px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 xl:gap-[115px] lg:px-5 xl:px-[65px]">
           {serviceItems.map((service, index) => (
             <motion.div
               key={service.id}
