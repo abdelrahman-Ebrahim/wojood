@@ -25,7 +25,7 @@ const Library = () => {
       >
         {/* Header */}
         <motion.h2
-          className="font-semibold text-[38px]"
+          className="font-semibold text-3xl md:text-[38px]"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
@@ -36,7 +36,7 @@ const Library = () => {
           {t("title")}
         </motion.h2>
         <motion.p
-          className="font-normal text-xl"
+          className="font-normal text-lg md:text-xl"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
@@ -49,10 +49,10 @@ const Library = () => {
       </motion.div>
 
       {/* Filter Buttons with scroll animations */}
-      <div className="flex flex-col justify-center items-center gap-6 px-[117px]">
+      <div className="flex flex-col justify-center items-center gap-2 md:gap-6 xl:px-[117px] w-full">
         <div className="flex justify-center items-center gap-[15px]">
           <motion.button
-            className="bg-[#6152C11A] rounded-[26px] text-[#390089] flex justify-center items-center py-2 px-9"
+            className="bg-[#6152C11A] rounded-[26px] text-[#390089] flex justify-center items-center py-2 px-4 md:px-9 "
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -65,7 +65,7 @@ const Library = () => {
             {t("btn1")}
           </motion.button>
           <motion.button
-            className="bg-[#6152C11A] rounded-[26px] text-[#390089] flex justify-center items-center py-2 px-9"
+            className="bg-[#6152C11A] rounded-[26px] text-[#390089] flex justify-center items-center py-2 px-4 md:px-9"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -78,7 +78,7 @@ const Library = () => {
             {t("btn2")}
           </motion.button>
           <motion.button
-            className="bg-[#390089] rounded-[26px] text-white font-semibold flex justify-center items-center py-2 px-9"
+            className="bg-[#390089] rounded-[26px] text-white font-semibold flex justify-center items-center py-2 px-4 md:px-9 text-nowrap"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -93,11 +93,11 @@ const Library = () => {
         </div>
 
         {/* Image Grids */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-[13px] w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-2 md:gap-y-0 gap-x-[13px] w-full px-5 xl:px-0">
           {["library1.png", "library2.png", "library3.png"].map(
             (image, index) => (
               <motion.div
-                className="relative w-[328px] h-[338px] overflow-hidden rounded-[12px]"
+                className="relative w-full h-[280px] md:h-[240px] lg:h-[338px] overflow-hidden rounded-[12px]"
                 key={index}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -112,6 +112,7 @@ const Library = () => {
                   alt={`library${index + 1}`}
                   layout="fill"
                   objectFit="cover"
+                  className="w-full"
                 />
               </motion.div>
             )
@@ -119,10 +120,10 @@ const Library = () => {
         </div>
 
         {/* Image Grid 2 with fade-in & scale */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[20px] w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2 md:gap-y-0 gap-x-2 lg:gap-x-[20px] w-full px-5 xl:px-0">
           {["library4.png", "library5.png"].map((image, index) => (
             <motion.div
-              className="relative w-[481px] h-[293px] overflow-hidden"
+              className="relative w-full h-[280px] lg:h-[293px] overflow-hidden"
               key={index}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
