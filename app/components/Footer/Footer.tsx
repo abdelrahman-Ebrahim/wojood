@@ -51,80 +51,83 @@ const Footer = () => {
                 <TfiHeadphoneAlt size={15} />
                 <p>{t("support")}</p>
               </div>
+              {/* Social Icons with Staggered Animation */}
+              <motion.div
+                className="flex justify-start items-start gap-2 mt-2"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 1,
+                  duration: 0.8,
+                  staggerChildren: 0.2, // Stagger animations for icons
+                }}
+              >
+                {[
+                  FaWhatsapp,
+                  FaInstagram,
+                  FaYoutube,
+                  FaXTwitter,
+                  FaFacebookF,
+                ].map((Icon, index) => (
+                  <motion.span
+                    key={index}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.2 * index, duration: 0.8 }}
+                  >
+                    <Icon size={20} className="text-[#212529BF]" />
+                  </motion.span>
+                ))}
+              </motion.div>
             </motion.div>
 
             {/* Right Columns (Important Links) */}
             <motion.div
-              className="col-span-2 flex justify-center items-start gap-10"
+              className="col-span-2 flex justify-center items-start gap-5 sm:gap-10 mt-5 md:mt-0"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              <div className="flex flex-col gap-[7px] justify-center items-start w-[293px]">
-                <h6 className="font-semibold text-[15px]">{t("title1")}</h6>
-                <p className="font-normal text-[15px] text-[#253D4E] cursor-pointer">
+              <div className="flex flex-col gap-[7px] justify-center items-start sm:w-[293px] flex-wrap">
+                <h6 className="font-semibold text-[15px] text-nowrap">{t("title1")}</h6>
+                <p className="font-normal text-[15px] text-[#253D4E] cursor-pointer text-nowrap">
                   {t("title1link1")}
                 </p>
-                <p className="font-normal text-[15px] text-[#253D4E] cursor-pointer">
+                <p className="font-normal text-[15px] text-[#253D4E] cursor-pointer text-nowrap">
                   {t("title1link2")}
                 </p>
               </div>
-              <div className="flex flex-col gap-[7px] justify-center items-start w-[293px]">
+              <div className="flex flex-col gap-[7px] justify-center items-start sm:w-[293px]">
                 <h6 className="font-semibold text-[15px]">{t("title2")}</h6>
-                <p className="font-normal text-[15px] text-[#253D4E] cursor-pointer">
+                <p className="font-normal text-[15px] text-[#253D4E] cursor-pointer text-nowrap">
                   {t("title2link1")}
                 </p>
-                <p className="font-normal text-[15px] text-[#253D4E] cursor-pointer">
+                <p className="font-normal text-[15px] text-[#253D4E] cursor-pointer text-nowrap">
                   {t("title2link2")}
                 </p>
               </div>
-              <div className="flex flex-col gap-[7px] justify-center items-start w-[293px]">
+              <div className="flex flex-col gap-[7px] justify-center items-start sm:w-[293px]">
                 <h6 className="font-semibold text-[15px]">{t("title3")}</h6>
-                <p className="font-normal text-[15px] text-[#253D4E] cursor-pointer">
+                <p className="font-normal text-[15px] text-[#253D4E] cursor-pointer text-nowrap">
                   {t("title3link1")}
                 </p>
-                <p className="font-normal text-[15px] text-[#253D4E] cursor-pointer">
+                <p className="font-normal text-[15px] text-[#253D4E] cursor-pointer text-nowrap">
                   {t("title3link2")}
                 </p>
               </div>
             </motion.div>
           </div>
-
-          {/* Social Icons with Staggered Animation */}
-          <motion.div
-            className="flex justify-start items-start gap-2 mt-2"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              delay: 1,
-              duration: 0.8,
-              staggerChildren: 0.2, // Stagger animations for icons
-            }}
-          >
-            {[FaWhatsapp, FaInstagram, FaYoutube, FaXTwitter, FaFacebookF].map(
-              (Icon, index) => (
-                <motion.span
-                  key={index}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ delay: 0.2 * index, duration: 0.8 }}
-                >
-                  <Icon size={20} className="text-[#212529BF]" />
-                </motion.span>
-              )
-            )}
-          </motion.div>
         </div>
       </motion.div>
 
       {/* Footer Bottom Section with Logo and Information */}
       <motion.div
-        className="px-16 py-[22px] flex justify-between items-center rounded-[16px] bg-[#EEEEEE] mx-[38px] w-full"
+        className="px-16 py-[22px] flex flex-col md:flex-row justify-between items-center rounded-[16px] bg-[#EEEEEE] mx-[38px] w-full gap-5 md:gap-0"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
       >
-        <p className="text-sm font-normal">{t("copyright")}</p>
+        <p className="text-sm font-normal text-nowrap">{t("copyright")}</p>
         <div className="flex justify-center items-center gap-2">
           <Image
             src={"/footer1.png"}
