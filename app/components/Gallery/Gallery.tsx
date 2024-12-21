@@ -53,7 +53,7 @@ const Gallery = () => {
     <section className="bg-galleryBackground bg-center bg-cover relative w-full flex flex-col font-rubik mt-16">
       {/* Top Button */}
       <motion.div
-        className={`px-[171px] mt-[59px] flex self-end`}
+        className={`px-[20px] md:px-[40px] lg:px-[80px] xl:px-[171px] mt-[59px] flex justify-end w-full`}
         variants={buttonVariant}
         initial="hidden"
         whileInView="visible"
@@ -72,19 +72,19 @@ const Gallery = () => {
       </motion.div>
 
       {/* Gallery */}
-      <div className="mt-6 px-[114px] flex justify-center items-center gap-8 pb-[59px]">
+      <div className="mt-6 xl:px-[114px] flex justify-center items-center gap-2 xl:gap-8 pb-[59px]">
         {/*Arrow */}
         <motion.div
-          className="size-12 rounded-full flex justify-center items-center border border-[#D1D5DB] cursor-pointer"
+          className="hidden md:size-12 rounded-full md:flex justify-center items-center border border-[#D1D5DB] cursor-pointer"
           variants={arrowVariant}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}
         >
           {locale === "ar" ? (
-            <MdKeyboardArrowRight size={24} />
+            <MdKeyboardArrowRight className="md:size-[24px] size-[12px]" />
           ) : (
-            <MdKeyboardArrowLeft size={24} />
+            <MdKeyboardArrowLeft className="md:size-[24px] size-[12px]"  />
           )}
         </motion.div>
 
@@ -98,7 +98,13 @@ const Gallery = () => {
             whileInView="visible"
             viewport={{ once: false, amount: 0.2 }}
           >
-            <div className="bg-[#F5F5F5] rounded-[12px] size-[241px]">
+            <div
+              className={`bg-[#F5F5F5] rounded-[12px] size-[180px] sm:size-[220px] md:size-[200px] lg:size-[220px] xl:size-[241px] ${
+                item.id !== 4 ? "block" : "hidden lg:block"
+              }  ${
+                item.id !== 3 ? "block" : "hidden md:block"
+              }`}
+            >
               <div className="px-[50px] py-6">
                 <Image
                   src={item.src}
@@ -109,10 +115,18 @@ const Gallery = () => {
                 />
               </div>
             </div>
-            <p className="font-medium font-rubik text-[15px] mt-2">
+            <p className={`font-medium font-rubik text-[15px] mt-2 ${
+                item.id !== 4 ? "block" : "hidden lg:block"
+              } ${
+                item.id !== 3 ? "block" : "hidden md:block"
+              }`}>
               {t("title")}
             </p>
-            <p className="font-normal font-rubik text-[16px]">
+            <p className={`font-normal font-rubik text-[16px] ${
+                item.id !== 4 ? "block" : "hidden lg:block"
+              } ${
+                item.id !== 3 ? "block" : "hidden md:block"
+              }`}>
               {t("subtitle")}
               <span className="text-[#390089] font-bold">{t("price")}</span>
             </p>
@@ -121,16 +135,16 @@ const Gallery = () => {
 
         {/*Arrow*/}
         <motion.div
-          className="size-12 rounded-full flex justify-center items-center border border-[#D1D5DB] cursor-pointer"
+          className="hidden md:size-12 rounded-full md:flex justify-center items-center border border-[#D1D5DB] cursor-pointer"
           variants={arrowVariant}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}
         >
           {locale === "ar" ? (
-            <MdKeyboardArrowLeft size={24} />
+            <MdKeyboardArrowLeft className="md:size-[24px] size-[12px]"  />
           ) : (
-            <MdKeyboardArrowRight size={24} />
+            <MdKeyboardArrowRight className="md:size-[24px] size-[12px]"  />
           )}
         </motion.div>
       </div>
