@@ -47,45 +47,27 @@ const Artists = () => {
   return (
     <section className="mt-16 font-rubik flex flex-col lg:mx-5 xl:mx-[157px] text-center justify-center items-center">
       {/* whileInView Title */}
-      <motion.h2
+      <h2
         className="font-semibold text-3xl md:text-[38px]"
-        initial={{ opacity: 0, y: 20 }} // Start with slightly lower opacity and slide in
-        whileInView={{ opacity: 1, y: 0 }} // Fade in and move to position
-        transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
       >
         {t("title")}
-      </motion.h2>
+      </h2>
 
       {/* whileInView Subtitle */}
-      <motion.p
+      <p
         className="text-lg md:text-xl mt-4 font-rubik font-normal"
-        initial={{ opacity: 0 }} // Start with hidden opacity
-        whileInView={{ opacity: 1 }} // Fade in
-        transition={{ delay: 0.3, duration: 0.6 }}
       >
         {t("subtitle")}
-      </motion.p>
+      </p>
 
       {/* Container with a fade-in effect for artist cards */}
-      <motion.div
+      <div
         className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[27px]"
-        initial="hidden"
-        whileInView="visible"
-        variants={{
-          hidden: { opacity: 0 },
-          visible: {
-            opacity: 1,
-            transition: { delayChildren: 0.3, staggerChildren: 0.2 },
-          },
-        }}
       >
         {artistsData.map((artist, index) => (
-          <motion.div
+          <div
             key={index}
             className="flex flex-col border rounded-[14px] gap-[14px] max-w-[300px]"
-            initial={{ opacity: 0, y: 50 }} // Start off-screen with opacity 0
-            whileInView={{ opacity: 1, y: 0 }} // Fade in and move to original position
-            transition={{ delay: index * 0.1, type: "spring", stiffness: 100 }}
           >
             <Image
               src={artist.image}
@@ -117,9 +99,9 @@ const Artists = () => {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 };

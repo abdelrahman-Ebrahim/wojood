@@ -32,7 +32,65 @@
   }
 }
 
-
 .hero {
-  clip-path: polygon(100% 94%, 100% 0, 51% 0, 0 0, 0 94%, 15% 96%, 28% 97%, 44% 98%, 55% 98%, 69% 97%, 85% 96%);
+  clip-path: polygon(
+    100% 94%,
+    100% 0,
+    51% 0,
+    0 0,
+    0 94%,
+    15% 96%,
+    28% 97%,
+    44% 98%,
+    55% 98%,
+    69% 97%,
+    85% 96%
+  );
+}
+
+.text-1 {
+  color: #140623;
+  text-align: center;
+  font-family: Rubik;
+  font-size: 14.803px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 37.075px; /* 250.459% */
+}
+
+.text-2 {
+  color: #390089;
+  text-align: center;
+  font-family: Rubik;
+  font-size: 14.803px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 37.075px; /* 250.459% */
+}
+
+.button-1 {
+  display: flex;
+  width: 151px;
+  height: 42px;
+  padding: 0px 13.661px;
+  justify-content: center;
+  align-items: center;
+  gap: 7.286px;
+  flex-shrink: 0;
+}
+
+.button-2 {
+  display: flex;
+  width: 188px;
+  height: 49px;
+  padding: 0px 6px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon1 {
+  width: 7.63px;
+  height: 11.02px;
+  flex-shrink: 0;
 }

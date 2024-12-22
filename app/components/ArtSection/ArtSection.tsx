@@ -11,20 +11,14 @@ const ArtSection = () => {
     <section className="mt-16 text-center font-rubik">
       <div className="flex flex-col lg:flex-row gap-[60px] md:gap-[127px] justify-center 2xl:justify-between items-center py-10 md:py-[92px]">
         {/* Image Section */}
-        <motion.div
+        <div
           className={`${
             locale === "ar" ? "lg:mr-[200px] xl:mr-[137px]" : "lg:ml-[200px] xl:ml-[137px]"
           }  relative w-full 2xl:w-fit flex justify-center items-center`}
-          initial={{ opacity: 0, y: 100 }} // Start with opacity 0 and below
-          whileInView={{ opacity: 1, y: 0 }} // whileInView to full opacity and original Y position
-          transition={{ duration: 1.5, ease: "easeOut" }} // Transition settings
         >
           <div className="w-full">
-            <motion.div
+            <div
               className="flex flex-col justify-center items-center gap-[44px] relative sm:mx-0"
-              initial={{ opacity: 0, scale: 0.8 }} // Initial state
-              whileInView={{ opacity: 1, scale: 1 }} // Target state
-              transition={{ duration: 1, ease: "easeInOut" }} // Smooth animation
             >
               {/* Two Skewed Orange Lines */}
               <div className="bg-[#FF4800] w-[320px] sm:w-[400px] lg:w-[500px] xl:w-[651px] h-[100px] skew-x-0 skew-y-2" />
@@ -40,9 +34,9 @@ const ArtSection = () => {
                   className="-rotate-6 shadow-artCombinedShadows w-[300px] sm:w-[360px] lg:w-[400px] xl:w-[473px] h-auto"
                 />
               </div>
-            </motion.div>
+            </div>
           </div>
-        </motion.div>
+        </div>
         {/* Text Section */}
         <div
           className={`flex flex-col min-w-[364px] ${
@@ -50,11 +44,8 @@ const ArtSection = () => {
           }`}
         >
           {/* Text Block 1 */}
-          <motion.div
+          <div
             className="text-center lg:text-start"
-            initial={{ opacity: 0, x: -100 }} // Start from left
-            whileInView={{ opacity: 1, x: 0 }} // whileInView to original position
-            transition={{ duration: 1, ease: "easeInOut" }}
           >
             <h2 className="text-3xl md:text-[40px] font-semibold relative inline-block leading-3">
               <span className="relative">
@@ -62,14 +53,11 @@ const ArtSection = () => {
                 {t("title1")}
               </span>
             </h2>
-          </motion.div>
+          </div>
 
           {/* Text Block 2 */}
-          <motion.div
+          <div
             className="text-center lg:text-start"
-            initial={{ opacity: 0, x: 100 }} // Start from right
-            whileInView={{ opacity: 1, x: 0 }} // whileInView to original position
-            transition={{ duration: 1, ease: "easeInOut" }}
           >
             <h2 className="text-3xl md:text-[40px] font-semibold relative inline-block leading-[60px]">
               <span className="relative">
@@ -77,19 +65,16 @@ const ArtSection = () => {
                 {t("title2")}
               </span>
             </h2>
-          </motion.div>
+          </div>
 
           {/* Paragraph */}
-          <motion.p
+          <p
             className="font-normal text-lg md:text-xl leading-[29px] text-center lg:text-start mt-4"
-            initial={{ opacity: 0 }} // Start with opacity 0
-            whileInView={{ opacity: 1 }} // whileInView to full opacity
-            transition={{ duration: 1.2, ease: "easeInOut" }}
           >
             {t("subtitle1")}
             <br />
             {t("subtitle2")}
-          </motion.p>
+          </p>
         </div>
       </div>
     </section>

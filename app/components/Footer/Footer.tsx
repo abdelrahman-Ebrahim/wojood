@@ -17,23 +17,12 @@ const Footer = () => {
   return (
     <footer className="flex flex-col justify-center items-center gap-[10px] font-rubik w-full py-[45px] px-5 xl:px-[60px]">
       {/* Main Footer with Scroll Animation */}
-      <motion.div
-        className="rounded-[16px] bg-[#EFE9FF] mt-[19px] mx-[38px] w-full"
-        initial={{ opacity: 0, y: 50 }} // Initial state (hidden and below view)
-        whileInView={{ opacity: 1, y: 0 }} // Animate to visible and in place
-        transition={{ duration: 0.8, type: "spring", stiffness: 100 }} // Smooth transition
-        viewport={{ once: true }} // Trigger animation only once when in view
-      >
+      <div className="rounded-[16px] bg-[#EFE9FF] mt-[19px] mx-[38px] w-full">
         <div className="py-[45px] px-[22px] flex flex-col gap-2">
           {/* Grid Layout for Content */}
           <div className="grid grid-cols-1 md:grid-cols-3">
             {/* Left Column (Logo and Contact Information) */}
-            <motion.div
-              className="col-span-1 flex flex-col gap-1 items-start justify-start"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-            >
+            <div className="col-span-1 flex flex-col gap-1 items-start justify-start">
               <div className="pb-[7px]">
                 <Image
                   src={"/logo.png"}
@@ -52,16 +41,7 @@ const Footer = () => {
                 <p>{t("support")}</p>
               </div>
               {/* Social Icons with Staggered Animation */}
-              <motion.div
-                className="flex justify-start items-start gap-2 mt-2"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  delay: 1,
-                  duration: 0.8,
-                  staggerChildren: 0.2, // Stagger animations for icons
-                }}
-              >
+              <div className="flex justify-start items-start gap-2 mt-2">
                 {[
                   FaWhatsapp,
                   FaInstagram,
@@ -69,27 +49,19 @@ const Footer = () => {
                   FaXTwitter,
                   FaFacebookF,
                 ].map((Icon, index) => (
-                  <motion.span
-                    key={index}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: 0.2 * index, duration: 0.8 }}
-                  >
+                  <span key={index}>
                     <Icon size={20} className="text-[#212529BF]" />
-                  </motion.span>
+                  </span>
                 ))}
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
 
             {/* Right Columns (Important Links) */}
-            <motion.div
-              className="col-span-2 flex justify-start sm:justify-center items-start gap-5 sm:gap-10 mt-5 md:mt-0 flex-wrap sm:flex-nowrap"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-            >
+            <div className="col-span-2 flex justify-start sm:justify-center items-start gap-5 sm:gap-10 mt-5 md:mt-0 flex-wrap sm:flex-nowrap">
               <div className="flex flex-col gap-[7px] justify-center items-start sm:w-[293px] flex-wrap">
-                <h6 className="font-semibold text-[15px] text-nowrap">{t("title1")}</h6>
+                <h6 className="font-semibold text-[15px] text-nowrap">
+                  {t("title1")}
+                </h6>
                 <p className="font-normal text-[15px] text-[#253D4E] cursor-pointer text-nowrap">
                   {t("title1link1")}
                 </p>
@@ -115,18 +87,13 @@ const Footer = () => {
                   {t("title3link2")}
                 </p>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Footer Bottom Section with Logo and Information */}
-      <motion.div
-        className="px-16 py-[22px] flex flex-col md:flex-row justify-between items-center rounded-[16px] bg-[#EEEEEE] mx-[38px] w-full gap-5 md:gap-0"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
-      >
+      <div className="px-16 py-[22px] flex flex-col md:flex-row justify-between items-center rounded-[16px] bg-[#EEEEEE] mx-[38px] w-full gap-5 md:gap-0">
         <p className="text-sm font-normal text-nowrap">{t("copyright")}</p>
         <div className="flex justify-center items-center gap-2">
           <Image
@@ -158,7 +125,7 @@ const Footer = () => {
             className="w-full"
           />
         </div>
-      </motion.div>
+      </div>
     </footer>
   );
 };
