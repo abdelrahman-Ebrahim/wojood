@@ -27,7 +27,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={direction}>
-      <body className="!font-rubik">
+      <body className="!font-rubik bg-[#F7F7F7]">
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           {children}

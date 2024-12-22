@@ -19,7 +19,8 @@ const config: Config = {
         canvasBackground: "url(/canvasBg.png)",
         canvas3: "url(/canvas3.png)",
         joinBg: "url(/JoinBg.png)",
-        joinBgMirror : "url(/JoinBgMirror.png)"
+        joinBgMirror : "url(/JoinBgMirror.png)",
+        dashedLine:"url(/line.svg)"
       },
       fontFamily: {
         rubik: ["rubik", "sans-serif"],
@@ -43,6 +44,7 @@ const config: Config = {
         -101px 64px 48px 0px #0000000D,
         -157px 100px 52px 0px #00000003
       `,
+      aboutBox : "0px 5.17px 5.17px 0px rgba(0, 0, 0, 0.09)"
       },
     },
   },
