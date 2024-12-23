@@ -20,7 +20,8 @@ const config: Config = {
         canvas3: "url(/canvas3.png)",
         joinBg: "url(/JoinBg.png)",
         joinBgMirror : "url(/JoinBgMirror.png)",
-        dashedLine:"url(/line.svg)"
+        dashedLine:"url(/line.svg)",
+        wavesBg:"url(/wavesBg.png)",
       },
       fontFamily: {
         rubik: ["rubik", "sans-serif"],

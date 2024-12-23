@@ -9,7 +9,6 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
-import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 
@@ -66,9 +65,9 @@ const Footer = () => {
                 <Link href={"/about"} className="font-normal text-[15px] text-[#253D4E] cursor-pointer text-nowrap">
                   {t("title1link1")}
                 </Link>
-                <p className="font-normal text-[15px] text-[#253D4E] cursor-pointer text-nowrap">
+                <Link href={"/publish"} className="font-normal text-[15px] text-[#253D4E] cursor-pointer text-nowrap">
                   {t("title1link2")}
-                </p>
+                </Link>
               </div>
               <div className="flex flex-col gap-[7px] justify-center items-start sm:w-[293px]">
                 <p className="font-semibold text-[15px]">{t("title2")}</p>
