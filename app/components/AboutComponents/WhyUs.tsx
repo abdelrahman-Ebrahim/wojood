@@ -5,7 +5,7 @@ const WhyUs = () => {
   const t = useTranslations("AboutWhyUs");
   return (
     <section className="mt-[104px]">
-      <div className="px-[70px] pb-10">
+      <div className="px-[30px] lg:px-[70px] pb-10">
         {/* title */}
         <div className="flex flex-col justify-center items-center gap-3">
           <h2 className="font-semibold text-[40px] text-[#390089]">
@@ -186,7 +186,7 @@ const WhyUs = () => {
           </div>
         </div>
 
-        <div className="mt-[151px] mx-[25px] flex flex-col justify-center items-center gap-[46px] relative">
+        <div className="mt-[151px] xl:mx-[25px] flex flex-col justify-center items-center gap-[46px] relative">
           <div className="w-full">
             <div className="flex justify-center items-center gap-[62.036px] relative">
               {/* Container */}
