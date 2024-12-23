@@ -1,12 +1,16 @@
+"use client"
 import { useLocale } from "next-intl";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import React from "react";
 
 const LanguageChangeBtn = () => {
   const locale = useLocale();
+  const pathname = usePathname();
+
   return (
     <Link
-      href={`/${locale.toLowerCase() === "en" ? "ar" : "en"}`}
+      href={`/${locale.toLowerCase() === "en" ? "ar" : "en"}${pathname.replace(`/${locale}`, "")}`}
       className="hidden md:flex justify-center items-center gap-1"
     >
       <svg

@@ -1,6 +1,6 @@
 import AboutBanner from "@/app/components/AboutComponents/AboutBanner";
 import AboutHeader from "@/app/components/AboutComponents/AboutHeader";
-import OurMethod from "@/app/components/AboutComponents/OurMethod";
+import OurApproach from "@/app/components/AboutComponents/OurApproach";
 import WhyUs from "@/app/components/AboutComponents/WhyUs";
 import React from "react";
 
@@ -10,7 +10,7 @@ const AboutPage = () => {
       <AboutHeader />
       <AboutBanner />
       <WhyUs />
-      <OurMethod/>
+      <OurApproach />
     </div>
   );
 };

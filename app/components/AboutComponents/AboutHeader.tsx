@@ -1,19 +1,14 @@
+import { useTranslations } from "next-intl";
 import React from "react";
 
 const AboutHeader = () => {
+  const t = useTranslations("AboutHeader");
   return (
     <section className="px-[127px] text-center">
       <h1 className="font-semibold text-[40px] text-[#390089]">
-        عالمُ يفيض فناً ؛ صممناه خصيصاً لتلبية احتياجات الفنانين وهواة الفن
-        ومُقتنييه.
+        {t("header")}
       </h1>
-      <p className="mt-10 text-xl">
-        وجود عبارة عن منصة إلكترونية وسيطة ومكتبة فنية ضخمة تضم في طياتها
-        مخزوناً وفيراً من الصور الفوتوغرافية واللوحات الفنية، بصيغة إلكترونية
-        متاحة للشراء كنسخ رقمية أو مطبوعة نعمل على توفيرها من خلال شراكاتنا مع
-        مئات الفنانين والمصورين في السعودية والوطن العربي، كما نقدم خدمة طباعة
-        عالية الجودة بالإضافة إلى خدمتي عملاء وتوصيل موثوقتين.
-      </p>
+      <p className="mt-10 text-xl">{t("description")}</p>
     </section>
   );
 };

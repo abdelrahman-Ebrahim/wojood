@@ -1,19 +1,21 @@
+import { useTranslations } from "next-intl";
 import React from "react";
 
 const WhyUs = () => {
+  const t = useTranslations("AboutWhyUs");
   return (
     <section className="mt-[104px]">
       <div className="px-[70px] pb-10">
         {/* title */}
         <div className="flex flex-col justify-center items-center gap-3">
           <h2 className="font-semibold text-[40px] text-[#390089]">
-            لماذا وجود ؟
+            {t("title")}
           </h2>
-          <p className="font-medium text-xl text-[#626C83]">لأننا ببساطة</p>
+          <p className="font-medium text-xl text-[#626C83]">{t("subtitle")}</p>
         </div>
         {/* icons */}
         <div className="mt-16 flex gap-[48px] min-h-[242px] relative">
-          <div className="absolute bg-dashedLine bg-center bg-no-repeat top-[34.37px] right-[166.85px] w-[663.92px] h-[78.47px]"></div>
+          {/* <div className="absolute bg-dashedLine bg-center bg-no-repeat top-[34.37px] right-[166.85px] w-[663.92px] h-[78.47px]"></div> */}
           {/* First card */}
           <div className="flex flex-col text-center items-center">
             <div className="size-16 rounded-[100px] flex justify-center items-center bg-[#EDEEF0]">
@@ -47,9 +49,11 @@ const WhyUs = () => {
               </svg>
             </div>
             <div className="mt-4 flex flex-col justify-center items-center gap-2">
-              <p className="font-semibold text-xl text-[#390089]">نهتم</p>
+              <p className="font-semibold text-xl text-[#390089]">
+                {t("text1")}
+              </p>
               <p className="font-normal text-lg text-[#444444]">
-                بتنمية قطاعي الفن والثقافة.
+                {t("subtext1")}
               </p>
             </div>
           </div>
@@ -96,9 +100,9 @@ const WhyUs = () => {
               </svg>
             </div>
             <div className="mt-4 flex flex-col justify-center items-center gap-2">
-              <p className="font-semibold text-xl text-[#390089]">ندعم</p>
+              <p className="font-semibold text-xl text-[#390089]">{t("text2")}</p>
               <p className="font-normal text-lg text-[#444444]">
-                التحول الرقمي والاقتصاد الإبداعي.
+                {t("subtext2")}
               </p>
             </div>
           </div>
@@ -147,9 +151,9 @@ const WhyUs = () => {
               </svg>
             </div>
             <div className="mt-4 flex flex-col justify-center items-center gap-2">
-              <p className="font-semibold text-xl text-[#390089]">نواكب</p>
+              <p className="font-semibold text-xl text-[#390089]">{t("text3")}</p>
               <p className="font-normal text-lg text-[#444444]">
-                أحدث الاتجاهات التقنية والفنية والتسويقية.
+                {t("subtext3")}
               </p>
             </div>
           </div>
@@ -174,9 +178,9 @@ const WhyUs = () => {
               </svg>
             </div>
             <div className="mt-4 flex flex-col justify-center items-center gap-2">
-              <p className="font-semibold text-xl text-[#390089]">نصل</p>
+              <p className="font-semibold text-xl text-[#390089]">{t("text4")}</p>
               <p className="font-normal text-lg text-[#444444]">
-                إلى أسواق إقليمية، وعربية وعالمية.
+                {t("subtext4")}
               </p>
             </div>
           </div>
@@ -188,15 +192,10 @@ const WhyUs = () => {
               {/* Container */}
               <div className="w-full flex flex-col pt-[32px] pb-[62px] px-[35.5px] gap-3 flex-shrink-0 bg-white border-[0.27px] border-white rounded-[38.408px] shadow-aboutBox relative z-40">
                 <p className="self-start text-[#390089] text-[32px] font-semibold">
-                  رؤيتنا
+                  {t("vision")}
                 </p>
                 <p className="self-start text-base font-semibold">
-                  من المملكة إلى أرجاء العالم العربي، نتطلع إلى أن نكون النموذج
-                  الرائد والوجهة الموثوقة في مجال عرض وشراء الصور الرقمية وطباعة
-                  اللوحات الفنية حسب الطلب، وأن نصبح عاملاً مؤثراً في جعل الفن
-                  جزءًا أساسياً من أسلوب حياة الفرد و المجتمع بطريقة تتجاوز مجرد
-                  التقدير البصري لتشمل إدراكاً أعمق لتأثيراته في مختلف جوانب
-                  الحياة اليومية
+                  {t("visiontext")}
                 </p>
               </div>
               {/* Overlay Background */}
@@ -209,13 +208,10 @@ const WhyUs = () => {
               {/* Container */}
               <div className="w-full flex flex-col pt-[32px] pb-[62px] px-[35.5px] gap-3 flex-shrink-0 bg-white border-[0.27px] border-white rounded-[38.408px] shadow-aboutBox relative z-40">
                 <p className="self-start text-[#390089] text-[32px] font-semibold">
-                  مهمتنا
+                  {t("mission")}
                 </p>
                 <p className="self-start text-base font-semibold">
-                  من الخليج إلى المحيط نعمل على جمع فنانينا تحت مظلة واحدة، ومنح
-                  عملائنا أفراداً وشركات حيزاً رحباً لعرض واقتناء وطباعة فنون
-                  مرئية فريدة ومتنوعة تبهرهم وترضي أذواقهم وتلبي كافة احتياجاتهم
-                  أياً كانت المناسبة.
+                  {t("missiontext")}
                 </p>
               </div>
               {/* Overlay Background */}

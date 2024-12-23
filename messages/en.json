@@ -118,22 +118,58 @@
   },
 
   "Footer": {
-    "address" : "Riyadh, Al Sulaymaniyah District, King Abdulaziz Road",
-    "tax" : "Tax number: 31042565670000",
-    "support" : "Technical support: +966570133338",
+    "address": "Riyadh, Al Sulaymaniyah District, King Abdulaziz Road",
+    "tax": "Tax number: 31042565670000",
+    "support": "Technical support: +966570133338",
 
-    "title1" : "Important Links",
+    "title1": "Important Links",
     "title1link1": "Who we are",
     "title1link2": "Publish your art",
 
-    "title2" : "Help",
+    "title2": "Help",
     "title2link1": "FAQ",
     "title2link2": "Contact us",
 
     "title3": "Legal",
-    "title3link1" : "Privacy policy",
+    "title3link1": "Privacy policy",
     "title3link2": "Terms & Conditions",
 
     "copyright": "All rights reserved to Wojood 2024©"
+  },
+
+  "AboutHeader": {
+    "header": "A world overflowing with art; designed to meet the needs of artists, art lovers, and collectors.",
+    "description": "Wojod is a digital intermediary platform and a large art library that contains a vast collection of photographic images and artworks, available in electronic format for purchase as digital or printed copies. We provide this through our partnerships with hundreds of artists and photographers in Saudi Arabia and the Arab world. We also offer high-quality printing service along with reliable customer service and delivery."
+  },
+
+  "AboutBanner": {
+    "text": "Discover the beauty and depth of Arab arts through an integrated artistic experience!"
+  },
+
+  "AboutWhyUs": {
+    "title": "Why Wojod?",
+    "subtitle": "Simply because",
+    "text1": "We Care",
+    "subtext1": "About developing the art and culture sectors.",
+    "text2": "We Support",
+    "subtext2": "Digital transformation and the creative economy.",
+    "text3": "We Keep Up",
+    "subtext3": "With the latest trends in technology, art, and marketing.",
+    "text4": "We Reach",
+    "subtext4": "Regional, Arab, and global markets.",
+    "vision": "Our Vision",
+    "visiontext": "From the Kingdom to the Arab world, we aim to be the leading model and trusted destination in the field of digital image display and on-demand art prints, becoming a driving force in making art an essential part of individual and community lifestyle, moving beyond mere visual appreciation to a deeper understanding of its impact on various aspects of daily life.",
+    "mission": "Our Mission",
+    "missiontext": "From the Gulf to the Ocean, we work to unite our artists under one umbrella, offering individuals and companies a broad space to display, acquire, and print unique and diverse visual arts that captivate them, satisfy their tastes, and meet all their needs, whatever the occasion."
+  },
+
+  "AboutApproach": {
+    "title": "Our Approach",
+    "card1title": "Quality and Sustainability :",
+    "card1text": "Custom prints on high-quality materials, using modern techniques to offer a more sustainable model for art and contribute to environmental protection.",
+    "card2title": "Integrated Solutions and Services :",
+    "card2text": "Wojod acts as an intermediary platform that combines two integrated services (sale of digital media and on-demand printed works), taking on all logistical burdens on behalf of its clients.",
+    "card3title": "Everything You Need in One Place :",
+    "card3text": "Images, illustrations, vectors, posters, and more; licensed, high-resolution, and ready for use in various contexts."
   }
 }
