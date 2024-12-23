@@ -2,7 +2,7 @@ import React from "react";
 
 const PublishDesc = () => {
   return (
-    <section className="mt-[51px] mx-[277px] flex flex-col justify-center items-center text-center">
+    <section className="mt-[51px] px-3 lg:px-[277px] flex flex-col justify-center items-center text-center">
       <p className="font-normal text-[19px] mb-10">
         وجود ليست مجرد منصةٍ وحسب بل عالمً يفيضُ فناً؛ صُمِمَ خصيصاً لتلبية
         احتياجات الفنانين وهواة الفن ومُقتنيه. فسواءً كنت تتطلع إلى بيع المحتوى
