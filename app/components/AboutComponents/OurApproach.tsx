@@ -5,22 +5,22 @@ const OurApproach = () => {
   const t = useTranslations("AboutApproach")
 
   return (
-    <section className="mt-[77px] mb-[98px] flex flex-col justify-center items-center">
-      <h2 className="font-semibold text-[#390089] text-[62px] relative">
+    <section className="mt-[77px] mb-[70px] lg:mb-[98px] flex flex-col justify-center items-center px-[30px] lg:px-0">
+      <h2 className="font-semibold text-[#390089] text-[40px] lg:text-[62px] relative">
         {/* Background behind the text */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/3 w-[586px] h-[38px] bg-[#6EBBFF33] z-0"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/3 w-[350px] lg:w-[586px] h-[38px] bg-[#6EBBFF33] z-0"></div>
         <span className="relative z-10">{t("title")}</span>
       </h2>
       <div className="mt-[73px]">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          <div className="bg-[#6EBBFF33] rounded-[22px] pt-[89px] pb-[18px] px-4 w-[337px] h-[300px] relative">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-14">
+          <div className="bg-[#6EBBFF33] rounded-[22px] pt-[89px] pb-[18px] px-4 min-h-[300px] relative">
             <div className="flex justify-center items-start flex-col">
               <p className="text-xl font-semibold">{t("card1title")}</p>
               <p className="pt-[6px] font-normal text-[#646464]">
               {t("card1text")}
               </p>
               {/* Center the absolute line div */}
-              <div className="absolute left-1/2 bottom-4 transform -translate-x-1/2 w-[283px] h-[3px] bg-[#6EBBFF66]" />
+              <span className="absolute left-1/2 bottom-4 transform -translate-x-1/2 w-4/5 h-[3px] bg-[#6EBBFF66]" />
               {/* Absolute badge div */}
               <div className="absolute -left-4 -top-5">
                 <svg
@@ -55,14 +55,14 @@ const OurApproach = () => {
             </div>
           </div>
 
-          <div className="bg-[#8747F433] rounded-[22px] pt-[89px] pb-[18px] px-4 w-[337px] h-[300px] relative">
+          <div className="bg-[#8747F433] rounded-[22px] pt-[89px] pb-[18px] px-4 min-h-[300px] relative">
             <div className="flex justify-center items-start flex-col">
               <p className="text-xl font-semibold">{t("card2title")}</p>
               <p className="pt-[6px] font-normal text-[#646464]">
               {t("card2text")}
               </p>
               {/* Center the absolute line div */}
-              <div className="absolute left-1/2 bottom-4 transform -translate-x-1/2 w-[283px] h-[3px] bg-[#8747F433]" />
+              <span className="absolute left-1/2 bottom-4 transform -translate-x-1/2 w-4/5 h-[3px] bg-[#8747F433]" />
               {/* Absolute badge div */}
               <div className="absolute -left-4 -top-5">
                 <svg
@@ -97,14 +97,14 @@ const OurApproach = () => {
             </div>
           </div>
 
-          <div className="bg-[#E8C91633] rounded-[22px] pt-[89px] pb-[18px] px-4 w-[337px] h-[300px] relative">
+          <div className="bg-[#E8C91633] rounded-[22px] pt-[89px] pb-[18px] px-4 min-h-[300px] relative">
             <div className="flex justify-center items-start flex-col">
               <p className="text-xl font-semibold">{t("card3title")}</p>
               <p className="pt-[6px] font-normal text-[#646464]">
               {t("card3text")}
               </p>
               {/* Center the absolute line div */}
-              <div className="absolute left-1/2 bottom-4 transform -translate-x-1/2 w-[283px] h-[3px] bg-[#E8C91666]" />
+              <span className="absolute left-1/2 bottom-4 transform -translate-x-1/2 w-4/5 h-[3px] bg-[#E8C91666]" />
               {/* Absolute badge div */}
               <div className="absolute -left-4 -top-5">
                 <svg
