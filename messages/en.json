@@ -171,5 +171,29 @@
     "card2text": "Wojod acts as an intermediary platform that combines two integrated services (sale of digital media and on-demand printed works), taking on all logistical burdens on behalf of its clients.",
     "card3title": "Everything You Need in One Place :",
     "card3text": "Images, illustrations, vectors, posters, and more; licensed, high-resolution, and ready for use in various contexts."
+  },
+
+  "PublishHeader": {
+    "title": "Share Your Art in Minutes...",
+    "subtitle": "We are pleased to have you join our platform, which allows you to share your unique art with customers worldwide, joining an elite of artists who share your vision and values, and track your sales directly."
+  },
+
+  "PublishDesc": {
+    "text": "Wojod is not just a platform; it’s a world overflowing with art, specially designed to meet the needs of artists, art lovers, and collectors. Whether you are looking to sell digital, printable content or purchase these unique artworks, Wojod offers you, whether artist or buyer, a marketplace to display and acquire a carefully curated collection of digital and printed content. Wojod invites you to explore the beauty and depth of the human experience through a seamless and inspiring online experience!",
+    "button": "Register, Artist"
+  },
+
+  "PublishCards": {
+    "card1title": "Simple and Easy-to-Use Dashboard",
+    "card1text": "Allows you to manage your profile and artworks, track sales and earnings, and access reports to understand and enhance your content’s performance on the platform.",
+
+    "card2title": "Monthly Sales Conversion",
+    "card2text": "Receive your earnings regularly and automatically, efficiently managing your income.",
+
+    "card3title": "Global Reach",
+    "card3text": "Expand your influence by showcasing your artwork to a larger audience without geographical restrictions.",
+
+    "card4title": "Dual Customization Options",
+    "card4text": "Provides greater flexibility in presenting your artwork and expanding your customer base."
   }
 }
