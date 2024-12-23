@@ -14,10 +14,10 @@ const WhyUs = () => {
           <p className="font-medium text-xl text-[#626C83]">{t("subtitle")}</p>
         </div>
         {/* icons */}
-        <div className="mt-16 flex gap-[48px] min-h-[242px] relative">
+        <div className="mt-16 grid grid-cols-2 gap-5 md:grid-cols-4">
           {/* <div className="absolute bg-dashedLine bg-center bg-no-repeat top-[34.37px] right-[166.85px] w-[663.92px] h-[78.47px]"></div> */}
           {/* First card */}
-          <div className="flex flex-col text-center items-center">
+          <div className="flex flex-col text-center items-center gap-4 even:mt-20 sm:even:mt-12">
             <div className="size-16 rounded-[100px] flex justify-center items-center bg-[#EDEEF0]">
               <svg
                 width="41"
@@ -48,7 +48,7 @@ const WhyUs = () => {
                 />
               </svg>
             </div>
-            <div className="mt-4 flex flex-col justify-center items-center gap-2">
+            <div className="flex flex-col justify-center items-center gap-2">
               <p className="font-semibold text-xl text-[#390089]">
                 {t("text1")}
               </p>
@@ -58,7 +58,7 @@ const WhyUs = () => {
             </div>
           </div>
           {/* Second card */}
-          <div className="flex flex-col text-center items-center self-end">
+          <div className="flex flex-col text-center items-center gap-4 even:mt-20 sm:even:mt-12">
             <div className="size-16 rounded-[100px] flex justify-center items-center bg-[#EDEEF0]">
               <svg
                 width="41"
@@ -99,7 +99,7 @@ const WhyUs = () => {
                 />
               </svg>
             </div>
-            <div className="mt-4 flex flex-col justify-center items-center gap-2">
+            <div className="flex flex-col justify-center items-center gap-2">
               <p className="font-semibold text-xl text-[#390089]">{t("text2")}</p>
               <p className="font-normal text-lg text-[#444444]">
                 {t("subtext2")}
@@ -107,7 +107,7 @@ const WhyUs = () => {
             </div>
           </div>
           {/* Third card */}
-          <div className="flex flex-col text-center items-center">
+          <div className="flex flex-col text-center items-center gap-4 even:mt-20 sm:even:mt-12">
             <div className="size-16 rounded-[100px] flex justify-center items-center bg-[#EDEEF0]">
               <svg
                 width="64"
@@ -150,7 +150,7 @@ const WhyUs = () => {
                 />
               </svg>
             </div>
-            <div className="mt-4 flex flex-col justify-center items-center gap-2">
+            <div className="flex flex-col justify-center items-center gap-2">
               <p className="font-semibold text-xl text-[#390089]">{t("text3")}</p>
               <p className="font-normal text-lg text-[#444444]">
                 {t("subtext3")}
@@ -159,7 +159,7 @@ const WhyUs = () => {
           </div>
 
           {/* Fourth card */}
-          <div className="flex flex-col text-center items-center self-end">
+          <div className="flex flex-col text-center items-center gap-4 even:mt-20 sm:even:mt-12">
             <div className="size-16 rounded-[100px] flex justify-center items-center bg-[#EDEEF0]">
               <svg
                 width="64"
@@ -177,7 +177,7 @@ const WhyUs = () => {
                 />
               </svg>
             </div>
-            <div className="mt-4 flex flex-col justify-center items-center gap-2">
+            <div className="flex flex-col justify-center items-center gap-2">
               <p className="font-semibold text-xl text-[#390089]">{t("text4")}</p>
               <p className="font-normal text-lg text-[#444444]">
                 {t("subtext4")}

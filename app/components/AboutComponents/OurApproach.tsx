@@ -6,7 +6,7 @@ const OurApproach = () => {
 
   return (
     <section className="mt-[77px] mb-[70px] lg:mb-[98px] flex flex-col justify-center items-center px-[30px] lg:px-0">
-      <h2 className="font-semibold text-[#390089] text-[40px] lg:text-[62px] relative">
+      <h2 className="font-semibold text-[#390089] text-[40px] lg:text-[62px] relative text-nowrap">
         {/* Background behind the text */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/3 w-[350px] lg:w-[586px] h-[38px] bg-[#6EBBFF33] z-0"></div>
         <span className="relative z-10">{t("title")}</span>
