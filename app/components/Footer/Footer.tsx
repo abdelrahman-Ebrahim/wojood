@@ -11,6 +11,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 const Footer = () => {
   const t = useTranslations("Footer");
@@ -59,18 +60,18 @@ const Footer = () => {
             {/* Right Columns (Important Links) */}
             <div className="col-span-2 flex justify-start sm:justify-center items-start gap-5 sm:gap-10 mt-5 md:mt-0 flex-wrap sm:flex-nowrap">
               <div className="flex flex-col gap-[7px] justify-center items-start sm:w-[293px] flex-wrap">
-                <h6 className="font-semibold text-[15px] text-nowrap">
+                <p className="font-semibold text-[15px] text-nowrap">
                   {t("title1")}
-                </h6>
-                <p className="font-normal text-[15px] text-[#253D4E] cursor-pointer text-nowrap">
-                  {t("title1link1")}
                 </p>
+                <Link href={"/about"} className="font-normal text-[15px] text-[#253D4E] cursor-pointer text-nowrap">
+                  {t("title1link1")}
+                </Link>
                 <p className="font-normal text-[15px] text-[#253D4E] cursor-pointer text-nowrap">
                   {t("title1link2")}
                 </p>
               </div>
               <div className="flex flex-col gap-[7px] justify-center items-start sm:w-[293px]">
-                <h6 className="font-semibold text-[15px]">{t("title2")}</h6>
+                <p className="font-semibold text-[15px]">{t("title2")}</p>
                 <p className="font-normal text-[15px] text-[#253D4E] cursor-pointer text-nowrap">
                   {t("title2link1")}
                 </p>
@@ -79,7 +80,7 @@ const Footer = () => {
                 </p>
               </div>
               <div className="flex flex-col gap-[7px] justify-center items-start sm:w-[293px]">
-                <h6 className="font-semibold text-[15px]">{t("title3")}</h6>
+                <p className="font-semibold text-[15px]">{t("title3")}</p>
                 <p className="font-normal text-[15px] text-[#253D4E] cursor-pointer text-nowrap">
                   {t("title3link1")}
                 </p>
