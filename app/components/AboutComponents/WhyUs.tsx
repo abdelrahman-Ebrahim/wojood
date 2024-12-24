@@ -2,6 +2,7 @@
 import { useTranslations } from "next-intl";
 import React from "react";
 import ArcherGrid from "./ArcherGrid";
+import MobileGrid from "./MobileGrid";
 
 const WhyUs = () => {
   const t = useTranslations("AboutWhyUs");
@@ -16,7 +17,15 @@ const WhyUs = () => {
           <p className="font-medium text-xl text-[#626C83]">{t("subtitle")}</p>
         </div>
         {/* icons */}
-        <ArcherGrid/>
+        {/* Medium and Large Screens */}
+        <div className="hidden md:block">
+          <ArcherGrid />
+        </div>
+        {/* Small Screens */}
+        <div className="block md:hidden">
+          <MobileGrid />
+        </div>
+
         <div className="mt-[151px] xl:mx-[25px] flex flex-col justify-center items-center gap-[46px] relative">
           <div className="w-full">
             <div className="flex justify-center items-center gap-[62.036px] relative">
