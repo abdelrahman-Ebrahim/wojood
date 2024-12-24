@@ -17,8 +17,8 @@ const WhyUs = () => {
         <div className="mt-16 grid grid-cols-2 gap-5 md:grid-cols-4">
           {/* <div className="absolute bg-dashedLine bg-center bg-no-repeat top-[34.37px] right-[166.85px] w-[663.92px] h-[78.47px]"></div> */}
           {/* First card */}
-          <div className="flex flex-col text-center items-center gap-4 even:mt-20 sm:even:mt-12">
-            <div className="size-16 rounded-[100px] flex justify-center items-center bg-[#EDEEF0]">
+          <div className="flex flex-col text-center items-center gap-4 even:mt-20 sm:even:mt-12 ">
+            <div className="size-16 rounded-[100px] flex justify-center items-center bg-[#EDEEF0] relative">
               <svg
                 width="41"
                 height="40"

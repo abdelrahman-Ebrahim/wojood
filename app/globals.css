@@ -95,3 +95,22 @@
   flex-shrink: 0;
 }
 
+.line1 {
+  border-radius:100px 0 0 0 ;
+  border-width: 2px 0 0 2px;
+  margin-left:100px;
+  }
+
+.line2 {
+
+  border-radius:0 0 100px 0 ;
+
+  border-width: 0 2px  2px 0 ;
+
+  }
+  .line {
+      border-color:red;
+  border-style: solid;
+    height:100px;
+  width: 100px;
+  }

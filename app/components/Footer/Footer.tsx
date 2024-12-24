@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-3">
             {/* Left Column (Logo and Contact Information) */}
             <div className="col-span-1 flex flex-col gap-1 items-start justify-start">
-              <div className="pb-[7px]">
+              <Link href={"/"} className="pb-[7px]">
                 <Image
                   src={"/logo.png"}
                   alt="logo"
@@ -31,7 +31,7 @@ const Footer = () => {
                   height={90}
                   className="w-[145] h-[90]"
                 />
-              </div>
+              </Link>
               <p className="font-normal text-sm text-[#212529BF]">
                 {t("address")}
               </p>

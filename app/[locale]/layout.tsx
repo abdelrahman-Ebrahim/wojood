@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import Navbar from "../components/Navbar/Navbar";
 import "../globals.css";
 import Footer from "../components/Footer/Footer";
+import NavBadge from "../components/Navbar/NavBadge";
 
 export default async function LocaleLayout({
   children,
@@ -29,6 +30,7 @@ export default async function LocaleLayout({
     <html lang={locale} dir={direction}>
       <body className="!font-rubik bg-[#F7F7F7]">
         <NextIntlClientProvider messages={messages}>
+          <NavBadge/>
           <Navbar />
           {children}
           <Footer />

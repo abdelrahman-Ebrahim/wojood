@@ -2,30 +2,15 @@ import Image from "next/image";
 import React from "react";
 import LanguageChangeBtn from "../LanguageChangeBtn";
 import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 const Navbar = () => {
   const locale = useLocale();
   const t = useTranslations("Navbar");
   return (
-    <div className="text-center font-rubik overflow-hidden">
-      <div className="w-full bg-[#390089] text-center flex justify-center items-center text-sm px-5 md:px-0 md:text-base text-white h-[40px]">
-        <p>
-          {t("header")
-            .split("20%")
-            .map((part, index, array) => (
-              <React.Fragment key={index}>
-                {part}
-                {index < array.length - 1 && (
-                  <strong className="font-bold">20%</strong>
-                )}
-              </React.Fragment>
-            ))}
-        </p>
-      </div>
-
-      <nav className="flex justify-between items-center w-full px-5 md:px-[56px] h-[63px]">
+      <nav className="flex justify-between items-center w-full px-5 md:px-[56px] h-[77px] border border-[#0000000F] shadow-navShadow bg-white overflow-hidden text-center rounded-b-[30px]">
         <div className="flex justify-center items-center">
-          <div
+          <Link href={"/"}
             className={`${
               locale === "ar" ? "ml-[49px]" : "mr-[49px]"
             }`}
@@ -37,7 +22,7 @@ const Navbar = () => {
               height={49}
               className="w-full"
             />
-          </div>
+          </Link>
 
           <div className="hidden lg:flex justify-center items-center gap-8">
             <button className="flex justify-center items-center bg-[#F7F7F8] gap-2 rounded-full px-4 py-2">
@@ -345,7 +330,6 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-    </div>
   );
 };
 

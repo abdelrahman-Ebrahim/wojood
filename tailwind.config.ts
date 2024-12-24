@@ -45,7 +45,8 @@ const config: Config = {
         -101px 64px 48px 0px #0000000D,
         -157px 100px 52px 0px #00000003
       `,
-      aboutBox : "0px 5.17px 5.17px 0px rgba(0, 0, 0, 0.09)"
+      aboutBox : "0px 5.17px 5.17px 0px rgba(0, 0, 0, 0.09)",
+      navShadow : "0px 2px 7.2px 0px #00000021"
       },
     },
   },
