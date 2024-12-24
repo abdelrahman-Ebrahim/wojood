@@ -6,7 +6,7 @@ import React from "react";
 
 const AboutPage = () => {
   return (
-    <div className="pt-[45px] md:pt-[77px] lg:px-[50px] xl:px-[150px] overflow-hidden bg-[#F7F7F7]">
+    <div className="mt-[45px] md:mt-[77px] lg:px-[50px] xl:px-[150px] overflow-hidden bg-[#F7F7F7]">
       <AboutHeader />
       <AboutBanner />
       <WhyUs />
